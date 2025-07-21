@@ -31,10 +31,10 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link hover:text-primary transition-colors">Home</a>
                     <a href="#about" class="nav-link hover:text-primary transition-colors">About</a>
+                    <a href="#education" class="nav-link hover:text-primary transition-colors">Education</a>
                     <a href="#experience" class="nav-link hover:text-primary transition-colors">Experience</a>
                     <a href="#skills" class="nav-link hover:text-primary transition-colors">Skills</a>
                     <a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a>
-                    <a href="#education" class="nav-link hover:text-primary transition-colors">Education</a>
                     <a href="#blog" class="nav-link hover:text-primary transition-colors">Blog</a>
                     <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
                 </div>
@@ -51,10 +51,10 @@
             <div class="px-6 py-4 space-y-4">
                 <a href="#home" class="block hover:text-primary transition-colors">Home</a>
                 <a href="#about" class="block hover:text-primary transition-colors">About</a>
+                <a href="#education" class="block hover:text-primary transition-colors">Education</a>
                 <a href="#experience" class="block hover:text-primary transition-colors">Experience</a>
                 <a href="#skills" class="block hover:text-primary transition-colors">Skills</a>
                 <a href="#projects" class="block hover:text-primary transition-colors">Projects</a>
-                <a href="#education" class="block hover:text-primary transition-colors">Education</a>
                 <a href="#blog" class="block hover:text-primary transition-colors">Blog</a>
                 <a href="#contact" class="block hover:text-primary transition-colors">Contact</a>
             </div>
@@ -113,23 +113,23 @@
         <span class="h-3 w-3 bg-green-500 rounded-full"></span>
     </div>
 
-    <!-- Fixed Code Block -->
-    <div class="text-base font-mono leading-relaxed text-white whitespace-pre">
-        <span class="text-pink-500">const</span> <span class="text-cyan-400">coder</span> <span class="text-white">=</span> <span class="text-orange-400">{</span>
-        <span class="text-cyan-300 block pl-10">name<span class="text-white">:</span> <span class="text-yellow-300">'Parantap Mishra'</span><span class="text-white">,</span></span>
-        <span class="text-cyan-300 block pl-10">age<span class="text-white">:</span> <span class="text-orange-400">17</span><span class="text-white">,</span></span>
-        <div class="flex">
-            <span class="text-cyan-300 pl-10">technologies<span class="text-white">:</span></span>
-            <span class="text-yellow-300"> ['HTML', 'CSS', 'JavaScript', 'Python', 'JAVA', 'Flask', 'MySQL']</span><span class="text-white">,</span>
-        </div>
-        <span class="text-cyan-300 block pl-10">hardWorker<span class="text-white">:</span> <span class="text-orange-400">true</span><span class="text-white">,</span></span>
-        <span class="text-cyan-300 block pl-10">quickLearner<span class="text-white">:</span> <span class="text-orange-400">true</span><span class="text-white">,</span></span>
-        <span class="text-cyan-300 block pl-10">problemSolver<span class="text-white">:</span> <span class="text-orange-400">true</span><span class="text-white">,</span></span>
-        <span class="text-cyan-300 block pl-10">sayHi<span class="text-white">:</span> <span class="text-green-400">function()</span> <span class="text-white">{</span>
-        <span class="text-pink-500 block pl-20">return</span> <span class="text-yellow-300">'Hello World!'</span><span class="text-white">;</span>
-        <span class="text-white block pl-10">}</span>
-        <span class="text-orange-400">}</span>
-    </div>
+    <!-- Fixed Code Block with Proper Wrapping -->
+    <pre class="text-base font-mono leading-relaxed text-white">
+<span class="text-pink-500">const</span> <span class="text-cyan-400">coder</span> <span class="text-white">=</span> <span class="text-orange-400">{</span>
+  <span class="text-cyan-300">name</span>: <span class="text-yellow-300">'Parantap Mishra'</span>,
+  <span class="text-cyan-300">age</span>: <span class="text-orange-400">17</span>,
+  <span class="text-cyan-300">skills</span>: <span class="text-yellow-300">[
+    'HTML', 'CSS', 'JavaScript', 
+    'Python', 'JAVA', 'Flask', 'MySQL'
+  ]</span>,
+  <span class="text-cyan-300">hardWorker</span>: <span class="text-orange-400">true</span>,
+  <span class="text-cyan-300">quickLearner</span>: <span class="text-orange-400">true</span>,
+  <span class="text-cyan-300">problemSolver</span>: <span class="text-orange-400">true</span>,
+  <span class="text-cyan-300">sayHi</span>: <span class="text-green-400">function()</span> <span class="text-white">{</span>
+    <span class="text-pink-500">return</span> <span class="text-yellow-300">'Hello World!'</span>;
+  <span class="text-white">}</span>
+<span class="text-orange-400">}</span>
+    </pre>
 </div>
 
 
@@ -143,21 +143,88 @@
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">Who I am?</h3>
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        My name is Parantap Mishra. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.
+                    <h3 class="text-2xl font-medium mb-6 text-green-400">Who I am?</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6 text-xl">
+                        I'm Parantap Mishra, a 17-year-old high school student with a deep interest in computer science, currently studying PCM with CS at Lotus Valley International School, Noida. I love building things that solve real problems and I'm always experimenting with code, design, and ideas that can make a difference.
+                        <br>
+                        My interests lie at the intersection of cybersecurity, Artificial Intelligence, software development, and design.
+                        Whether its through software solutions, entrepreneurial ventures, or hands-on projects, I aim to create solutions that are both functional and thoughtful.
+                        <br>
+                        Beyond tech, I'm passionate about community work and utilizing my technical skills to help the society evident through the initiatives I have undertaken. Apart from this, I am creative graphic designer, confident public speaker and a regular basketball player. I'm constantly learning, building, and collaborating — with the goal of shaping technology that’s responsible, creative, and impactful.
                     </p>
                     
                 </div>
                 <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/400x500/1f2937/16f2b3?text=Profile" alt="Profile" class="rounded-lg shadow-xl">
+                    <img src="assets/images/pfp.jpeg" alt="Profile" class="rounded-lg shadow-xl w-full h-80">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Education & Academic Achievements</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <div class="bg-gray-800/50 p-8 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                                <i class="fas fa-school text-gray-900"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold">Lotus Valley International School, Noida</h3>
+                                    <span class="text-primary font-semibold">2019 - Present</span>
+                                </div>
+                                <p class="text-gray-300">&#8594; Currently in Grade XII- Physics, Chemistry, Mathematics, Computer Science and English</p>
+                                <p class="text-gray-300">&#8594; Grade X: 98% aggregate | 3rd in School | Subject topper of German and English</p>
+                                <p class="text-gray-300">&#8594; Grade IX: 95% aggregate | Subject topper of German</p>
+                                <p class="text-gray-300">&#8594; Three year scholar badge holder: 8th, 9th and 10th</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                                <img src="assets/images/collegeboard.png">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold">CollegeBoard</h3>
+                                </div>
+                                <p class="text-gray-300">&#8594; SAT: 1600/1600 Superscore</p>
+                                <ul class="list-disc list-inside ml-6 text-gray-300 mb-2">
+                                    <li>First Attempt 1530 | Maths 800 | English 730</li>
+                                    <li>First Attempt 1520 | English 800 | Maths 720</li>
+                                </ul>
+                                <p class="text-gray-300">&#8594; AP CSA: 5/5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800/50 p-8 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                                <i class="fas fa-award text-gray-900"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h3 class="text-xl font-bold">Miscellaneous</h3>
+                                </div>
+                                <p class="text-gray-300">&#8594; Passed A2 level in German by Goethe Institute</p>
+                                <p class="text-gray-300">&#8594; Medal of distinction in NSO 2022-23 </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-20">
+    <section id="experience" class="py-20  bg-gray-800/50">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Experience</h2>
             <div class="max-w-4xl mx-auto">
@@ -165,7 +232,7 @@
                     <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-primary"></div>
                     
                     <!-- Experience Item 1 -->
-                    <div class="relative flex items-center mb-12">
+                    <div class="relative flex items-center mb-12 timeline-item">
                         <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900"></div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8">
                             <div class="bg-gray-800 p-6 rounded-lg">
@@ -178,7 +245,7 @@
                     </div>
 
                     <!-- Experience Item 2 -->
-                    <div class="relative flex items-center mb-12">
+                    <div class="relative flex items-center mb-12 timeline-item">
                         <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900"></div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 md:ml-auto">
                             <div class="bg-gray-800 p-6 rounded-lg">
@@ -191,7 +258,7 @@
                     </div>
 
                     <!-- Experience Item 3 -->
-                    <div class="relative flex items-center">
+                    <div class="relative flex items-center mb-12 timeline-item">
                         <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-gray-900"></div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8">
                             <div class="bg-gray-800 p-6 rounded-lg">
@@ -346,60 +413,7 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Education</h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <div class="bg-gray-900/50 p-8 rounded-lg">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                                <i class="fas fa-graduation-cap text-gray-900"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h3 class="text-xl font-bold">Bachelor Degree</h3>
-                                    <span class="text-primary font-semibold">2020 - Present</span>
-                                </div>
-                                <p class="text-gray-300">National University of Bangladesh</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="bg-gray-900/50 p-8 rounded-lg">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                                <i class="fas fa-school text-gray-900"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h3 class="text-xl font-bold">Higher Secondary Certificate</h3>
-                                    <span class="text-primary font-semibold">2018 - 2020</span>
-                                </div>
-                                <p class="text-gray-300">Noakhali Islamia Kamil Madrasah</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900/50 p-8 rounded-lg">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                                <i class="fas fa-book text-gray-900"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex items-center justify-between mb-2">
-                                    <h3 class="text-xl font-bold">Secondary School Certificate</h3>
-                                    <span class="text-primary font-semibold">2008 - 2018</span>
-                                </div>
-                                <p class="text-gray-300">Baitus Saif Islamia Madrasah</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Blog Section -->
     <section id="blog" class="py-20">
