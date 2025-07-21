@@ -189,3 +189,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add loading animation
     document.body.classList.add('loaded');
 });
+
+
+const Eobserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            Eobserver.unobserve(entry.target); // Optional: animate only once
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+    Eobserver.observe(item);
+});
