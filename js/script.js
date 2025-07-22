@@ -205,3 +205,4 @@ const Eobserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.timeline-item').forEach(item => {
     Eobserver.observe(item);
 });
+
