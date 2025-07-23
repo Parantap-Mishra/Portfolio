@@ -15,7 +15,7 @@
 .bg-gradient-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
-.marquee {
+/* .marquee {
     overflow: hidden;
     position: relative;
 }
@@ -37,7 +37,7 @@
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-}
+} */
 .navbar-blur {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -76,13 +76,6 @@
     transform: translateY(0);
 }
 
-
-.gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
 
 .projects-container {
     position: relative;
@@ -192,4 +185,92 @@ html {
     .project-card:nth-child(3) { top: 5.5rem; }
     .project-card:nth-child(4) { top: 7rem; }
     .project-card:nth-child(5) { top: 8.5rem; }
+}
+
+
+
+.marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: calc(200%); /* Double width to accommodate duplicated content */
+    gap: 1rem;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.skill-card {
+    flex: 0 0 auto;
+    width: 140px;
+    background: #1f2937;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.skill-card:hover {
+    background: #374151;
+    border-color: #667eea;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.skill-card img {
+    height: 2.5rem;
+    width: auto;
+    margin: 0 auto 0.75rem;
+    object-fit: contain;
+}
+
+.skill-card h3 {
+    font-weight: 600;
+    color: #f9fafb;
+    font-size: 0.875rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - 1rem));
+    }
+}
+
+/* Pause animation on hover */
+.marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-card {
+        width: 120px;
+        padding: 1rem;
+    }
+    
+    .skill-card i {
+        font-size: 2rem;
+    }
+    
+    .skill-card img {
+        height: 2rem;
+    }
 }
