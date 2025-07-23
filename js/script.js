@@ -1,32 +1,3 @@
-// Theme Toggle
-/*const themeIcon = document.getElementById('theme-icon');
-
-// 1. Load stored preference or system setting
-if (
-  localStorage.theme === 'dark' ||
-  (!('theme' in localStorage) &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches)
-) {
-  document.documentElement.classList.add('dark');
-  themeIcon.className = 'fas fa-moon';
-} else {
-  document.documentElement.classList.remove('dark');
-  themeIcon.className = 'fas fa-sun';
-}
-
-// 2. Toggle on click, update both class + icon + localStorage
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  if (document.documentElement.classList.contains('dark')) {
-    document.documentElement.classList.remove('dark');
-    themeIcon.className = 'fas fa-sun';
-    localStorage.theme = 'light';
-  } else {
-    document.documentElement.classList.add('dark');
-    themeIcon.className = 'fas fa-moon';
-    localStorage.theme = 'dark';
-  }
-});*/
-
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -205,4 +176,3 @@ const Eobserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.timeline-item').forEach(item => {
     Eobserver.observe(item);
 });
-
