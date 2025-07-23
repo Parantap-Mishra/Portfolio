@@ -75,3 +75,121 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.projects-container {
+    position: relative;
+    z-index: 1;
+    /* Add more space between cards to prevent overlap */
+    /* padding-bottom: 100vh; */
+}
+
+.project-card {
+    position: sticky;
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto 1.5rem auto;
+    z-index: 10;
+    /* Add a minimum height to prevent overlap issues */
+    min-height: 300px;
+}
+
+
+.project-card:nth-child(1) {
+    top: 5rem;
+    z-index: 11;
+}
+
+.project-card:nth-child(2) {
+    top: 8.5rem;
+    z-index: 12;
+}
+
+.project-card:nth-child(3) {
+    top: 12rem;
+    z-index: 13;
+}
+
+.project-card:nth-child(4) {
+    top: 15.5rem;
+    z-index: 14;
+}
+.project-card:nth-child(5) {
+    top: 19.3rem;
+    z-index: 15;
+}
+.card-content {
+    background: linear-gradient(135deg, #0d1224 0%, #0a0d37 100%);
+    border: 1px solid rgba(27, 44, 104, 0.6);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.card-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Add the gradient border at the top */
+.card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ec4899, #8b5cf6, transparent);
+}
+
+/* Mac OS window styling */
+.mac-header {
+    background: rgba(45, 51, 59, 0.8);
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    padding: 0.75rem 1rem;
+    position: relative;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation for project cards appearing */
+.project-card {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card:nth-child(1) { top: 2.5rem; }
+    .project-card:nth-child(2) { top: 4rem; }
+    .project-card:nth-child(3) { top: 5.5rem; }
+    .project-card:nth-child(4) { top: 7rem; }
+    .project-card:nth-child(5) { top: 8.5rem; }
+}
