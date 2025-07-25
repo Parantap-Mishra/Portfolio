@@ -188,7 +188,7 @@ html {
 }
 
 
-
+/*Skills*/
 .marquee {
     overflow: hidden;
     position: relative;
@@ -233,7 +233,7 @@ html {
 }
 
 .skill-card img {
-    height: 2.5rem;
+    height: 3rem;
     width: auto;
     margin: 0 auto 0.75rem;
     object-fit: contain;
