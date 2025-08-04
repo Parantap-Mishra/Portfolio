@@ -34,8 +34,8 @@
                     <a href="#education" class="nav-link hover:text-primary transition-colors">Education</a>
                     <a href="#experience" class="nav-link hover:text-primary transition-colors">Experience</a>
                     <a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a>
-                    <a href="#skills" class="nav-link hover:text-primary transition-colors">Skills</a>
                     <a href="#certification" class="nav-link hover:text-primary transition-colors">Courses</a>
+                    <a href="#awards" class="nav-link hover:text-primary transition-colors">Achievements</a>
                     <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden p-2">
@@ -51,8 +51,8 @@
                 <a href="#education" class="block hover:text-primary transition-colors">Education</a>
                 <a href="#experience" class="block hover:text-primary transition-colors">Experience</a>
                 <a href="#projects" class="block hover:text-primary transition-colors">Projects</a>
-                <a href="#skills" class="block hover:text-primary transition-colors">Skills</a>
                 <a href="#certification" class="block hover:text-primary transition-colors">Courses</a>
+                <a href="#awards" class="nav-link hover:text-primary transition-colors">Achievements</a>
                 <a href="#contact" class="block hover:text-primary transition-colors">Contact</a>
             </div>
         </div>
@@ -74,26 +74,59 @@
                         <button class="bg-gradient-to-r from-purple-600 to-blue-500
                                         px-10 py-4 text-lg font-semibold rounded-lg
                                         hover:opacity-90 transition-opacity">
-                            Get In Touch
+                            <a href="#contact">Get In Touch</a>
                         </button>
-                        <a href="#resume" class="border-2 border-primary px-10 py-4 text-lg font-semibold
+                        <a href="#" class="border-2 border-primary px-10 py-4 text-lg font-semibold
                                                 rounded-lg hover:bg-primary hover:text-gray-900 transition-all">
                             Download Resume
                         </a>
                     </div>
 
                     <div class="flex space-x-4 mt-6">
-                        <a href="mailto:your@email.com" class="group">
+                        <div class="inline-block relative" id="email-wrapper">
+                            <!-- Visible button -->
+                            <button type="button" aria-label="Email me" id="email-btn" class="group" onclick="tryEmail(event)">
                             <div class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-purple-500/50 hover:bg-purple-600">
-                            <i class="fas fa-envelope text-xl"></i>
+                                <i class="fas fa-envelope text-xl"></i>
                             </div>
-                        </a>
-                        <a href="https://linkedin.com/in/yourprofile" class="group">
+                            </button>
+
+                            <!-- Fallback popup (hidden initially) -->
+                            <div id="email-fallback" class="absolute top-full mt-2 w-64 p-3 bg-gray-900 text-sm rounded shadow-lg border border-purple-600 hidden">
+                                <div class="mb-2">Unable to open your mail app</div>
+                                <div class="flex flex-col gap-2">
+                                    <a
+                                        href="https://mail.google.com/mail/?view=cm&to=parantap098@gmail.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="underline text-purple-400"
+                                    >
+                                        Compose in Gmail
+                                    </a>
+                                    <a
+                                        href="https://outlook.office.com/mail/deeplink/compose?to=parantap098@gmail.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="underline text-blue-400"
+                                    >
+                                        Compose in Outlook Web
+                                    </a>
+                                    <div class="flex items-center gap-2">
+                                        <span class="break-all">parantap098@gmail.com</span>
+                                        <button onclick="copyEmail()" class="ml-auto px-2 py-1 bg-primary rounded text-xs">
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="copy-msg" class="text-xs text-green-400 mt-1 hidden">Copied!</div>
+                            </div>
+                        </div>
+                        <a href="https://www.linkedin.com/in/parantap-mishra-141770297/" target="_blank" class="group">
                             <div class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-blue-500/50 hover:bg-purple-600">
                             <i class="fab fa-linkedin-in text-xl"></i>
                             </div>
                         </a>
-                        <a href="https://github.com/yourusername" class="group">
+                        <a href="https://github.com/Parantap-Mishra" class="group" target="_blank">
                             <div class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-white/50 hover:bg-purple-600">
                             <i class="fab fa-github text-xl"></i>
                             </div>
@@ -102,16 +135,16 @@
 
                 </div>
                 <div class="order-1 md:order-2 flex justify-center">
-    <div class="w-full max-w-2xl bg-[#0d1117] rounded-xl shadow-lg p-5 border border-purple-500/30 bg-gradient-to-br from-[#1e1e2f] to-[#0d1117] relative overflow-hidden">
-    <!-- MacOS-style header buttons -->
-    <div class="flex space-x-2 mb-4">
-        <span class="h-3 w-3 bg-red-500 rounded-full"></span>
-        <span class="h-3 w-3 bg-yellow-500 rounded-full"></span>
-        <span class="h-3 w-3 bg-green-500 rounded-full"></span>
-    </div>
+                <div class="w-full max-w-2xl bg-[#0d1117] rounded-xl shadow-lg p-5 border border-purple-500/30 bg-gradient-to-br from-[#1e1e2f] to-[#0d1117] relative overflow-hidden">
+                <!-- MacOS-style header buttons -->
+                <div class="flex space-x-2 mb-4">
+                    <span class="h-3 w-3 bg-red-500 rounded-full"></span>
+                    <span class="h-3 w-3 bg-yellow-500 rounded-full"></span>
+                    <span class="h-3 w-3 bg-green-500 rounded-full"></span>
+                </div>
 
 
-    <pre class="text-base font-mono leading-relaxed text-white">
+<pre class="text-base font-mono leading-relaxed text-white">
 <span class="text-pink-500">const</span> <span class="text-cyan-400">coder</span> <span class="text-white">=</span> <span class="text-orange-400">{</span>
   <span class="text-cyan-300">name</span>: <span class="text-yellow-300">'Parantap Mishra'</span>,
   <span class="text-cyan-300">age</span>: <span class="text-orange-400">17</span>,
@@ -340,7 +373,7 @@
         </div>
     </section>
 
-        <!-- Projects Section -->
+    <!-- Projects Section -->
     <section id="projects" class="pt-24 pb-96">
         <div class="container mx-auto px-6 mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-center gradient-text">Projects</h2>
@@ -414,14 +447,14 @@
                                 <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Design Thinking</span>
                             </div>
                             <div class="flex space-x-4">
-                                <a href="https://github.com/Parantap-Mishra/PERCY.git" class="text-blue-400 hover:underline transition-colors">
+                                <a target="_blank" href="https://github.com/Parantap-Mishra/PERCY.git" class="text-blue-400 hover:underline transition-colors">
                                     <i class="fab fa-github mr-2"></i>Link
                                 </a>
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-blue-500 transition-colors">
-                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_showcasing-percy-at-kriti-a-journey-of-innovation-activity-7275195535139975169-YCDF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"></a><img src="assets/images/percy.jpeg" class="w-full h-full object-fill"></a>
+                            <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-58 flex items-center justify-center hover:border-blue-500 transition-colors">
+                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_showcasing-percy-at-kriti-a-journey-of-innovation-activity-7275195535139975169-YCDF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img src="assets/images/percy.jpeg" class="w-full h-full object-cover"></a>
                             </div>
                         </div>
                     </div>
@@ -455,14 +488,14 @@
                                 <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Pandas</span>
                             </div>
                             <div class="flex space-x-4">
-                                <a href="https://github.com/Parantap-Mishra/RollCall.git" class="text-green-400 hover:underline transition-colors">
+                                <a target="_blank" href="https://github.com/Parantap-Mishra/RollCall.git" class="text-green-400 hover:underline transition-colors">
                                     <i class="fab fa-github mr-2"></i>Source Code
                                 </a>
                             </div>
                         </div>
                         <div class="flex justify-center">
                             <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-green-500 transition-colors">
-                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-rollcall-automation-activity-7347503207281041408-l6vB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"></a><img src="assets/images/rollcall.jpg" class="w-full h-full object-fill"></a>
+                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-rollcall-automation-activity-7347503207281041408-l6vB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img src="assets/images/rollcall.jpg" class="w-full h-full object-fill"></a>
                             </div>
                         </div>
                     </div>
@@ -503,7 +536,7 @@
                         </div>
                         <div class="flex justify-center">
                             <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-yellow-500 transition-colors">
-                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-redactify-data-activity-7349408162979991552-kCWM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"></a><img src="assets/images/redactify.jpg" class="w-full h-full object-fill"></a>
+                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-redactify-data-activity-7349408162979991552-kCWM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img src="assets/images/redactify.jpg" class="w-full h-full object-fill"></a>
                             </div>
                         </div>
                         
@@ -1007,7 +1040,6 @@
         </div>
     </section>
 
-
     <!-- Contact Section -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-6">
@@ -1103,7 +1135,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8   bg-gray-800/50 text-center">
+    <footer class="py-8 bg-gray-800/50 text-center">
         <div class="container mx-auto px-6">
             <p class="text-gray-400">&copy; 2025 Parantap Mishra. All rights reserved.</p>
             <p class="text-gray-500 text-sm mt-2">Built with HTML, CSS & JavaScript</p>
