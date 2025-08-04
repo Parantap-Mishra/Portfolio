@@ -177,3 +177,35 @@ document.querySelectorAll('.timeline-item').forEach(item => {
     Eobserver.observe(item);
 });
 
+const EMAIL = 'parantap098@gmail.com';
+  let fallbackTimeout;
+
+  function tryEmail(e) {
+    // Record time before navigation attempt
+    const before = Date.now();
+    // Try mailto
+    window.location.href = `mailto:${EMAIL}`;
+
+    // Show fallback if after ~500ms focus hasn't changed (heuristic)
+    clearTimeout(fallbackTimeout);
+    fallbackTimeout = setTimeout(() => {
+      // Show fallback UI
+      document.getElementById('email-fallback').classList.remove('hidden');
+    }, 500);
+  }
+
+  // Clicking outside hides fallback
+  document.addEventListener('click', (e) => {
+    const wrapper = document.getElementById('email-wrapper');
+    if (!wrapper.contains(e.target)) {
+      document.getElementById('email-fallback').classList.add('hidden');
+    }
+  });
+
+  function copyEmail() {
+    navigator.clipboard.writeText(EMAIL).then(() => {
+      const msg = document.getElementById('copy-msg');
+      msg.classList.remove('hidden');
+      setTimeout(() => msg.classList.add('hidden'), 1500);
+    });
+  }
