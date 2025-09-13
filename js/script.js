@@ -70,25 +70,43 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Contact form submission
-const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+// Contact form submission
+  const form = document.getElementById('contact-form');
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault(); // stop normal form submit
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      alert("✅ Your response has been submitted!");
+      form.reset(); // clear the form
+    } else {
+      alert("❌ Something went wrong. Please try again.");
+    }
+  });
+
+// const contactForm = document.getElementById('contact-form');
+
+// contactForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
     
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
-    };
+//     // Get form data
+//     const formData = new FormData(contactForm);
+//     const data = {
+//         name: formData.get('name'),
+//         email: formData.get('email'),
+//         subject: formData.get('subject'),
+//         message: formData.get('message')
+//     };
     
-    // Simulate form submission
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
-});
+//     // Simulate form submission
+//     alert('Thank you for your message! I will get back to you soon.');
+//     contactForm.reset();
+// });
 
 // Initialize Lottie animation for hero section
 const heroLottie = document.getElementById('hero-lottie');
