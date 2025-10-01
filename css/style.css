@@ -15,29 +15,7 @@
 .bg-gradient-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
-/* .marquee {
-    overflow: hidden;
-    position: relative;
-}
-.marquee-content {
-    display: flex;
-    animation: marquee 20s linear infinite;
-}
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-.skill-card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-.project-card {
-    transition: all 0.3s ease;
-}
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-} */
+
 .navbar-blur {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);

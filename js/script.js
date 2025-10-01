@@ -108,31 +108,31 @@ window.addEventListener('scroll', () => {
 //     contactForm.reset();
 // });
 
-// Initialize Lottie animation for hero section
-const heroLottie = document.getElementById('hero-lottie');
+// // Initialize Lottie animation for hero section
+// const heroLottie = document.getElementById('hero-lottie');
 
-// Create a simple animated SVG as placeholder for Lottie
-if (heroLottie) {
-    heroLottie.innerHTML = `
-        <svg viewBox="0 0 400 400" class="w-full h-full">
-            <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            <circle cx="200" cy="200" r="150" fill="url(#grad1)" opacity="0.8">
-                <animate attributeName="r" values="150;160;150" dur="3s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="200" cy="200" r="100" fill="none" stroke="#16f2b3" stroke-width="2" opacity="0.6">
-                <animate attributeName="r" values="100;120;100" dur="2s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="200" cy="200" r="50" fill="#16f2b3" opacity="0.9">
-                <animate attributeName="r" values="50;60;50" dur="1.5s" repeatCount="indefinite"/>
-            </circle>
-        </svg>
-    `;
-}
+// // Create a simple animated SVG as placeholder for Lottie
+// if (heroLottie) {
+//     heroLottie.innerHTML = `
+//         <svg viewBox="0 0 400 400" class="w-full h-full">
+//             <defs>
+//                 <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+//                     <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+//                     <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+//                 </linearGradient>
+//             </defs>
+//             <circle cx="200" cy="200" r="150" fill="url(#grad1)" opacity="0.8">
+//                 <animate attributeName="r" values="150;160;150" dur="3s" repeatCount="indefinite"/>
+//             </circle>
+//             <circle cx="200" cy="200" r="100" fill="none" stroke="#16f2b3" stroke-width="2" opacity="0.6">
+//                 <animate attributeName="r" values="100;120;100" dur="2s" repeatCount="indefinite"/>
+//             </circle>
+//             <circle cx="200" cy="200" r="50" fill="#16f2b3" opacity="0.9">
+//                 <animate attributeName="r" values="50;60;50" dur="1.5s" repeatCount="indefinite"/>
+//             </circle>
+//         </svg>
+//     `;
+// }
 
 // Add intersection observer for animations
 const observerOptions = {

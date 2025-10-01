@@ -22,6 +22,7 @@
                     <a href="#experience" class="nav-link hover:text-primary transition-colors">Experience</a>
                     <a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a>
                     <a href="#awards" class="nav-link hover:text-primary transition-colors">Achievements</a>
+                    <a href="#comm" class="nav-link hover:text-primary transition-colors">Community service</a>
                     <a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden p-2">
@@ -38,6 +39,7 @@
                 <a href="#experience" class="block hover:text-primary transition-colors">Experience</a>
                 <a href="#projects" class="block hover:text-primary transition-colors">Projects</a>
                 <a href="#awards" class="nav-link hover:text-primary transition-colors">Achievements</a>
+                <a href="#comm" class="nav-link hover:text-primary transition-colors">Community service</a>
                 <a href="#contact" class="block hover:text-primary transition-colors">Contact</a>
             </div>
         </div>
@@ -229,7 +231,7 @@
                                     <h3 class="text-xl font-bold">Miscellaneous</h3>
                                 </div>
                                 <p class="text-gray-300">&#8594; Passed A2 level in German by Goethe Institute</p>
-                                <p class="text-gray-300">&#8594; Medal of distinction in NSO 2022-23 </p>
+                                <p class="text-gray-300">&#8594; Medal of excellence in NSO 2022-23 </p>
                             </div>
                         </div>
                     </div>
@@ -238,8 +240,39 @@
         </div>
     </section>
 
+    <!--Publication-->
+    <section id="publication" class="py-20 bg-gray-800/50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Publication</h2>
+    
+    <div class="max-w-6xl mx-auto bg-gray-800/60 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row p-10">
+      
+      <!--Left: Image-->
+      <div class="md:w-1/3 w-full h-48 md:h-auto">
+        <img src="assets/certs/publication.jpg" alt="Publication Cover" class="w-full h-full object-contain">
+      </div>
+      
+      <!-- Right: Content -->
+      <div class="p-6 md:w-2/3 flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-2">Balancing Personalization and Privacy: Ethical Considerations in Conversational AI Systems</h3>
+          <p class="text-primary font-semibold mb-1">International Journal of Scientific Development and Research</p>
+          <p class="text-gray-400 text-sm mb-4">Published: August 2025</p>
+          <p class="text-gray-300 mb-4">
+            This paper explores ethical issues in conversational AI, focusing on how sensitive user data is used for personalization versus privacy. Based on a survey of 100 participants, it highlights concerns around consent, trust, and regulation, and compares governance frameworks in India, the U.S., and globally—concluding that transparent, user-centric practices are essential for responsible AI.
+          </p>
+        </div>
+        <a href="https://ijsdr.org/papers/IJSDR2508136.pdf" target="_blank" rel="noopener noreferrer"
+           class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
+          Read Publication
+        </a>
+      </div>
+    </div>
+  </div>
+    </section>
+
     <!-- Experience Section -->
-    <section id="experience" class="py-20  bg-gray-800/50">
+    <section id="experience" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Experience</h2>
             <div class="max-w-4xl mx-auto">
@@ -256,12 +289,19 @@
                                 <span class="text-primary text-sm font-semibold">(May 2025 - Present)</span>
                                 <h3 class="text-xl font-bold mb-2">IT Captain</h3>
                                 <p class="text-gray-300 mb-2">Lotus Valley International School</p>
-                                <p class="text-gray-400">
-                                    I lead all technology-related initiatives in school, including event tech coordination, digital infrastructure management, and supporting technical needs across academic and extracurricular domains.
+                                <p class="text-gray-400 mb-4">
+                                    I lead all technology-related initiatives in school, including event tech coordination for school events and .
+                                    Organized a cybersecurity webinar for school students.
                                 </p>
+                                <div class="flex items-center space-x-2">
+                                    <img src="assets/images/cert_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <a href="assets/certs/it_captain.png" target="_blank"
+                                        class="hover:underline text-green-400 font-semibold">
+                                        Certificate
+                                    </a>
+                                </div>
                             </div>
                         </div>
-
                     </div>
 
                     <!-- Experience Item 2 -->
@@ -274,7 +314,14 @@
                                 <span class="text-primary text-sm font-semibold">(Jan 2025 - May 2025)</span>
                                 <h3 class="text-xl font-bold mb-2">Data Engineering & Web Development Intern</h3>
                                 <p class="text-gray-300 mb-2">CVOTER</p>
-                                <p class="text-gray-400">Independently built a Flask-based dashboard connected to MS SQL Server, enabling dynamic visualization of 8,500+ survey responses.</p>
+                                <p class="text-gray-400 mb-4">Independently built a Flask-based dashboard connected to MS SQL Server, enabling dynamic visualization of 8,500+ survey responses.</p>
+                                <div class="flex items-center space-x-2">
+                                    <img src="assets/images/letter_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <a href="assets/certs/cvoter_lor.pdf" target="_blank"
+                                        class="hover:underline text-green-400 font-semibold">
+                                        LOR
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -288,8 +335,15 @@
                             <div class="bg-gray-800 p-6 rounded-lg">
                                 <span class="text-primary text-sm font-semibold">(May 2025 – Present)</span>
                                 <h3 class="text-xl font-bold mb-2">Chief Information Officer (CIO) </h3>
-                                <p class="text-gray-300 mb-2">Kyren (Student-Led Fintech Startup) </p>
-                                <p class="text-gray-400">Building a website and overseeing tech strategy for a fintech startup offering low-interest microloans to students via guardians.</p>
+                                <p class="text-gray-300 mb-2">Kyren Flow (Student-Led Fintech Startup) </p>
+                                <p class="text-gray-400 mb-4">Building a website and overseeing tech strategy for a fintech startup offering low-interest microloans to students via guardians.</p>
+                                <div class="flex items-center space-x-2">
+                                    <img src="assets/images/linkedin_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_it-is-our-pleasure-to-announce-the-launch-activity-7353658775674777602-0NbE?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4" target="_blank"
+                                        class="hover:underline text-green-400 font-semibold">
+                                        LinkedIn
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -304,7 +358,14 @@
                                 <span class="text-primary text-sm font-semibold">(July 2024 - Dec 2024)</span>
                                 <h3 class="text-xl font-bold mb-2">App Development Intern</h3>
                                 <p class="text-gray-300 mb-2">PRESPL</p>
-                                <p class="text-gray-400">Developed an XML and Java-based logging app for biomass collection centres at PRESPL, enabling real-time data sync, role-based access, and validation to streamline inventory management across India.</p>
+                                <p class="text-gray-400 mb-4">Developed an XML and Java-based app for biomass collection centres at PRESPL, enabling real-time data sync, role-based access, and validation to streamline inventory management across India.</p>
+                                <div class="flex items-center space-x-2">
+                                    <img src="assets/images/letter_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <a href="assets/certs/prespl_lor.pdf" target="_blank"
+                                        class="hover:underline text-green-400 font-semibold">
+                                        LOR
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -324,7 +385,7 @@
                         </div>
                     </div>
 
-                    <!-- Experience Item 6 -->
+                    <!-- experience item 6 -->
                     <div class="relative flex items-center mb-12 timeline-item">
                         <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
                             <img src="assets/images/upstride.jpg" alt="Company Logo" class="w-12 h-12 object-contain scale-125">
@@ -349,7 +410,14 @@
                                 <span class="text-primary text-sm font-semibold">(Sep 2024 – Mar 2025)</span>
                                 <h3 class="text-xl font-bold mb-2">Deputy Media Director – STEM OLC</h3>
                                 <p class="text-gray-300 mb-2">Lotus Valley International School</p>
-                                <p class="text-gray-400">Promoted STEM workshops by managing outreach, communications, and content design. Helped connect students with industry experts through interactive webinars and sessions.</p>
+                                <p class="text-gray-400 mb-4">Promoted STEM workshops by managing outreach, communications, and content design. Helped connect students with industry experts through interactive webinars and sessions.</p>
+                                <div class="flex items-center space-x-2">
+                                    <img src="assets/images/webinar_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <a href="assets/images/olc.jpeg" target="_blank"
+                                        class="hover:underline text-green-400 font-semibold">
+                                        Sessions
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -359,7 +427,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="pt-24 pb-96">
+    <section id="projects" class="pt-24 pb-96   bg-gray-800/50">
         <div class="container mx-auto px-6 mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-center gradient-text">Projects</h2>
         </div>
@@ -383,12 +451,13 @@
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-300 mb-4">
-                                Designed and developed a full-stack dashboard under my internship at CVOTER to visualize over 8,500 rows of public opinion data. Integrated MS SQL backend with Flask, automated Excel data ingestion, and implemented filterable, sortable survey views. Added dynamic satisfaction trend graphs using Highcharts for clear visual insights.
+                                Designed and developed a full-stack dashboard during my internship at CVOTER to visualize over 8,500 rows of public opinion data. Integrated MS SQL backend with Flask, automated Excel data ingestion, and implemented filterable, sortable survey views. Added dynamic satisfaction trend graphs using Highcharts for clear visual insights.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Python</span>
                                 <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">MS SQL</span>
                                 <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Flask</span>
+                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Jinja2</span>
                                 <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Full Stack Web Development</span>
                             </div>
                             <div class="flex space-x-4">
@@ -424,7 +493,10 @@
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-300 mb-4">
-                                Designed an amphibious emergency-response vehicle for flood-prone regions. A sensor-triggered vehicle that inflates and floats when water levels rise. Specialized spoke wheels enable navigation on both land and water. Presented at DesignTrek (NID) and Kriti (Kothari), gaining valuable feedback to refine our prototype for real-world disaster deployment.
+                                Designed an amphibious emergency-response vehicle prototype for flood-prone regions. A sensor-triggered vehicle that inflates 
+                                and floats when water levels rise. Specialized spoke wheels enable navigation on both land and water. Presented at 
+                                DesignTrek (National Institute of Design) and Kriti (Kothari School), gaining valuable feedback to refine our prototype for real-world disaster 
+                                deployment.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Arduino</span>
@@ -568,7 +640,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-800/50">
+    <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Skills</h2>
             <div class="marquee mb-12">
@@ -713,7 +785,7 @@
     </section>
 
     <!-- Courses & Certification -->
-    <section id="certification" class="py-20">
+    <section id="certification" class="py-20 bg-gray-800/50">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Courses & Certification</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -853,13 +925,13 @@
     </section>
 
     <!--Awards-->
-    <section id="awards" class="py-20 bg-gray-800/50">
+    <section id="awards" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Achievements & Awards</h2>
     
             <div class="max-w-5xl mx-auto space-y-8">
                 <!-- Card 1-->
-                <div class="bg-gray-900 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
                     <!-- Date (top-right corner) -->
                     <span class="absolute top-10 right-10 text-base text-primary font-semibold">
                         May 2025
@@ -900,7 +972,7 @@
                 </div>
 
                 <!-- Card 2-->
-                <div class="bg-gray-900 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
                     <!-- Date (top-right corner) -->
                     <span class="absolute top-10 right-10 text-base text-primary font-semibold">
                         Dec 2024
@@ -941,7 +1013,7 @@
                 </div>
 
                 <!-- Card 3-->
-                <div class="bg-gray-900 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
                     <!-- Date (top-right corner) -->
                     <span class="absolute top-10 right-10 text-base text-primary font-semibold">
                         Nov 2024
@@ -982,7 +1054,7 @@
                 </div>
 
                 <!-- Card 4-->
-                <div class="bg-gray-900 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
+                <div class="bg-gray-800/50 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
                     <!-- Date (top-right corner) -->
                     <span class="absolute top-10 right-10 text-base text-primary font-semibold">
                         Oct 2024
@@ -1025,40 +1097,68 @@
         </div>
     </section>
 
-    <!--Publication-->
-    <section id="publication" class="py-20">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Publication</h2>
-    
-    <div class="max-w-6xl mx-auto bg-gray-800/60 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row p-10">
-      
-      <!--Left: Image-->
-      <div class="md:w-1/3 w-full h-48 md:h-auto">
-        <img src="assets/certs/publication.jpg" alt="Publication Cover" class="w-full h-full object-contain">
-      </div>
-      
-      <!-- Right: Content -->
-      <div class="p-6 md:w-2/3 flex flex-col justify-between">
-        <div>
-          <h3 class="text-2xl font-bold text-white mb-2">Balancing Personalization and Privacy: Ethical Considerations in Conversational AI Systems</h3>
-          <p class="text-primary font-semibold mb-1">International Journal of Scientific Development and Research</p>
-          <p class="text-gray-400 text-sm mb-4">Published: August 2025</p>
-          <p class="text-gray-300 mb-4">
-            This paper explores ethical issues in conversational AI, focusing on how sensitive user data is used for personalization versus privacy. Based on a survey of 100 participants, it highlights concerns around consent, trust, and regulation, and compares governance frameworks in India, the U.S., and globally—concluding that transparent, user-centric practices are essential for responsible AI.
-          </p>
-        </div>
-        <a href="https://ijsdr.org/papers/IJSDR2508136.pdf" target="_blank" rel="noopener noreferrer"
-           class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
-          Read Publication
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    <!--Community-->
+    <section id="comm" class="py-20 bg-gray-800/50">
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Giving back to the commutnity</h2>
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- 1 -->
+            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <video class="w-full h-84 object-cover"
+                    controls preload="metadata"
+                    poster="assets/images/thumbnail1.png">
+                <source src="assets/videos/Video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">Tree Plantation Drive</h3>
+                <p class="text-gray-300">We organized a plantation drive to spread awareness about sustainability and environmental care.</p>
+            </div>
+            </div>
 
+            <!-- 2 -->
+            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <video class="w-full h-84 object-cover"
+                    controls preload="metadata"
+                    poster="assets/images/thumbnail 2.png">
+                <source src="assets/videos/Video 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">Teaching Underprivileged Kids</h3>
+                <p class="text-gray-300">I volunteered to teach STEM subjects to underprivileged children, bridging education gaps.</p>
+            </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <video class="w-full h-84 object-cover"
+                    controls preload="metadata"
+                    poster="assets/images/t3.png">
+                <source src="assets/videos/Video 3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">Cleanliness Drive</h3>
+                <p class="text-gray-300">Participated in a cleanliness campaign to promote hygiene and community responsibility.</p>
+            </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src="assets/certs/codeConq.jpg" alt="Community Service Photo"
+                class="w-full h-84 object-cover">
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2">Donation Drive</h3>
+                <p class="text-gray-300">Collected clothes, food, and supplies for families in need through a local NGO initiative.</p>
+            </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20  bg-gray-800/50">
+    <section id="contact" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Get In Touch</h2>
             <div class="max-w-4xl mx-auto">
