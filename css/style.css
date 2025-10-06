@@ -252,3 +252,12 @@ html {
         height: 2rem;
     }
 }
+
+/* Collage tiles fill their grid cells without distortion  */
+.collage .tile { display: grid; place-items: center; min-height: 0; }
+
+/* Respect reduced motion
+@media (prefers-reduced-motion: reduce) {
+  .collage img,
+  .caption { transition: none !important; }
+} */

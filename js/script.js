@@ -227,3 +227,105 @@ const EMAIL = 'parantap098@gmail.com';
       setTimeout(() => msg.classList.add('hidden'), 1500);
     });
   }
+
+
+/* ===== Extracurriculars: Lightbox + Captions ===== */
+(function () {
+  // Collect galleries by name
+  const galleries = {};
+  document.querySelectorAll('[data-gallery]').forEach(btn => {
+    const g = btn.getAttribute('data-gallery');
+    if (!galleries[g]) galleries[g] = [];
+    galleries[g].push(btn);
+  });
+
+  const lb = document.getElementById('lightbox');
+  if (!lb) return; // bail if section not present
+  const lbImg = document.getElementById('lb-image');
+  const btnClose = document.getElementById('lb-close');
+  const btnPrev  = document.getElementById('lb-prev');
+  const btnNext  = document.getElementById('lb-next');
+
+  let currentGallery = null;
+  let currentIndex = 0;
+  let lastFocus = null;
+
+  function openLightbox(galleryName, index) {
+    currentGallery = galleries[galleryName] || [];
+    currentIndex = index;
+    const src = currentGallery[currentIndex].getAttribute('data-src');
+    lbImg.src = src;
+    lb.classList.remove('hidden');
+    lb.classList.add('flex');
+    lastFocus = document.activeElement;
+    btnClose.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lb.classList.add('hidden');
+    lb.classList.remove('flex');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  function show(delta) {
+    if (!currentGallery || !currentGallery.length) return;
+    currentIndex = (currentIndex + delta + currentGallery.length) % currentGallery.length;
+    const src = currentGallery[currentIndex].getAttribute('data-src');
+    lbImg.src = src;
+  }
+
+  // Bind clicks on tiles
+  Object.entries(galleries).forEach(([name, items]) => {
+    items.forEach((el, i) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const idx = parseInt(el.getAttribute('data-index'), 10) || i;
+        openLightbox(name, idx);
+      });
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const idx = parseInt(el.getAttribute('data-index'), 10) || i;
+          openLightbox(name, idx);
+        }
+      });
+      el.setAttribute('tabindex', '0');
+    });
+  });
+
+  // Controls
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', () => show(-1));
+  btnNext.addEventListener('click', () => show(1));
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) closeLightbox(); // click backdrop to close
+  });
+  document.addEventListener('keydown', (e) => {
+    if (lb.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') show(-1);
+    if (e.key === 'ArrowRight') show(1);
+  });
+
+  // Mobile/touch: tap to toggle captions in Misc grid
+  document.querySelectorAll('.tap-caption').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // If it's inside a lightbox gallery tile, let the lightbox handler run
+      if (btn.closest('[data-gallery]')) return;
+      const cap = btn.querySelector('.caption');
+      if (!cap) return;
+      const visible = cap.style.opacity === '1' || cap.classList.contains('!opacity-100');
+      if (visible) {
+        cap.classList.remove('!opacity-100', '!translate-y-0');
+        cap.style.opacity = '';
+        cap.style.transform = '';
+      } else {
+        cap.classList.add('!opacity-100', '!translate-y-0');
+      }
+      e.preventDefault();
+    });
+  });
+})();
