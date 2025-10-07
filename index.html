@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body class="bg-gray-900 text-white overflow-x-hidden">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 navbar-blur bg-gray-900/80">
@@ -54,7 +56,8 @@
                         Hi, This is <span class="gradient-text">Parantap Mishra</span><br>
                     </h1>
                     <h3 class="text-3xl md:text-4xl mb-4 font-medium text-gray-300">A Computer Science Enthusiast</h3>
-                    <h2 class="text-xl md:text-xl mb-6 typewriter border-r-2 border-primary italic drop-shadow-sm font-thin">
+                    <h2
+                        class="text-xl md:text-xl mb-6 typewriter border-r-2 border-primary italic drop-shadow-sm font-thin">
                         Powered by Curiosity. Driven by Code.
                     </h2>
                     <div class="flex flex-wrap gap-6 mt-8">
@@ -64,7 +67,8 @@
                             <a href="#contact">Get In Touch</a>
                         </button>
                         <a href="assets/resume.pdf" class="border-2 border-primary px-10 py-4 text-lg font-semibold
-                                                rounded-lg hover:bg-primary hover:text-gray-900 transition-all" target="_blank">
+                                                rounded-lg hover:bg-primary hover:text-gray-900 transition-all"
+                            target="_blank">
                             Download Resume
                         </a>
                     </div>
@@ -72,35 +76,31 @@
                     <div class="flex space-x-4 mt-6">
                         <div class="inline-block relative" id="email-wrapper">
                             <!-- Visible button -->
-                            <button type="button" aria-label="Email me" id="email-btn" class="group" onclick="tryEmail(event)">
-                            <div class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-purple-500/50 hover:bg-purple-600">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
+                            <button type="button" aria-label="Email me" id="email-btn" class="group"
+                                onclick="tryEmail(event)">
+                                <div
+                                    class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-purple-500/50 hover:bg-purple-600">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
                             </button>
 
                             <!-- Fallback popup (hidden initially) -->
-                            <div id="email-fallback" class="absolute top-full mt-2 w-64 p-3 bg-gray-900 text-sm rounded shadow-lg border border-purple-600 hidden">
+                            <div id="email-fallback"
+                                class="absolute top-full mt-2 w-64 p-3 bg-gray-900 text-sm rounded shadow-lg border border-purple-600 hidden">
                                 <div class="mb-2">Unable to open your mail app</div>
                                 <div class="flex flex-col gap-2">
-                                    <a
-                                        href="https://mail.google.com/mail/?view=cm&to=parantap098@gmail.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="underline text-purple-400"
-                                    >
+                                    <a href="https://mail.google.com/mail/?view=cm&to=parantap098@gmail.com"
+                                        target="_blank" rel="noopener noreferrer" class="underline text-purple-400">
                                         Compose in Gmail
                                     </a>
-                                    <a
-                                        href="https://outlook.office.com/mail/deeplink/compose?to=parantap098@gmail.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="underline text-blue-400"
-                                    >
+                                    <a href="https://outlook.office.com/mail/deeplink/compose?to=parantap098@gmail.com"
+                                        target="_blank" rel="noopener noreferrer" class="underline text-blue-400">
                                         Compose in Outlook Web
                                     </a>
                                     <div class="flex items-center gap-2">
                                         <span class="break-all">parantap098@gmail.com</span>
-                                        <button onclick="copyEmail()" class="ml-auto px-2 py-1 bg-primary rounded text-xs">
+                                        <button onclick="copyEmail()"
+                                            class="ml-auto px-2 py-1 bg-primary rounded text-xs">
                                             Copy
                                         </button>
                                     </div>
@@ -109,29 +109,31 @@
                             </div>
                         </div>
                         <a href="https://www.linkedin.com/in/parantap-mishra-141770297/" target="_blank" class="group">
-                            <div class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-blue-500/50 hover:bg-purple-600">
-                            <i class="fab fa-linkedin-in text-xl"></i>
+                            <div
+                                class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-blue-500/50 hover:bg-purple-600">
+                                <i class="fab fa-linkedin-in text-xl"></i>
                             </div>
                         </a>
                         <a href="https://github.com/Parantap-Mishra" class="group" target="_blank">
-                            <div class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-white/50 hover:bg-purple-600">
-                            <i class="fab fa-github text-xl"></i>
+                            <div
+                                class="bg-gray-800 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-white/50 hover:bg-purple-600">
+                                <i class="fab fa-github text-xl"></i>
                             </div>
                         </a>
                     </div>
 
                 </div>
                 <div class="order-1 md:order-2 flex justify-center">
-                <div class="w-full max-w-2xl bg-[#0d1117] rounded-xl shadow-lg p-5 border border-purple-500/30 bg-gradient-to-br from-[#1e1e2f] to-[#0d1117] relative overflow-hidden">
-                <!-- MacOS-style header buttons -->
-                <div class="flex space-x-2 mb-4">
-                    <span class="h-3 w-3 bg-red-500 rounded-full"></span>
-                    <span class="h-3 w-3 bg-yellow-500 rounded-full"></span>
-                    <span class="h-3 w-3 bg-green-500 rounded-full"></span>
-                </div>
+                    <div
+                        class="w-full max-w-2xl bg-[#0d1117] rounded-xl shadow-lg p-5 border border-purple-500/30 bg-gradient-to-br from-[#1e1e2f] to-[#0d1117] relative overflow-hidden">
+                        <!-- MacOS-style header buttons -->
+                        <div class="flex space-x-2 mb-4">
+                            <span class="h-3 w-3 bg-red-500 rounded-full"></span>
+                            <span class="h-3 w-3 bg-yellow-500 rounded-full"></span>
+                            <span class="h-3 w-3 bg-green-500 rounded-full"></span>
+                        </div>
 
-
-<pre class="text-base font-mono leading-relaxed text-white">
+                        <pre class="text-base font-mono leading-relaxed text-white">
 <span class="text-pink-500">const</span> <span class="text-cyan-400">coder</span> <span class="text-white">=</span> <span class="text-orange-400">{</span>
   <span class="text-cyan-300">name</span>: <span class="text-yellow-300">'Parantap Mishra'</span>,
   <span class="text-cyan-300">age</span>: <span class="text-orange-400">17</span>,
@@ -147,11 +149,10 @@
   <span class="text-white">}</span>
 <span class="text-orange-400">}</span>
     </pre>
-</div>
+                    </div>
 
-
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- About Section -->
@@ -162,14 +163,23 @@
                 <div>
                     <h3 class="text-2xl font-medium mb-6 text-green-400">Who I am?</h3>
                     <p class="text-gray-300 leading-relaxed mb-6 text-xl">
-                        I'm Parantap Mishra, a 17-year-old high school student with a deep interest in computer science, currently studying PCM with CS at Lotus Valley International School, Noida. I love building things that solve real problems and I'm always experimenting with code, design, and ideas that can make a difference.
+                        I'm Parantap Mishra, a 17-year-old high school student with a deep interest in computer science,
+                        currently studying PCM with CS at Lotus Valley International School, Noida. I love building
+                        things that solve real problems and I'm always experimenting with code, design, and ideas that
+                        can make a difference.
                         <br>
-                        My interests lie at the intersection of cybersecurity, Artificial Intelligence, software development, and design.
-                        Whether its through software solutions, entrepreneurial ventures, or hands-on projects, I aim to create solutions that are both functional and thoughtful.
+                        My interests lie at the intersection of cybersecurity, Artificial Intelligence, software
+                        development, and design.
+                        Whether its through software solutions, entrepreneurial ventures, or hands-on projects, I aim to
+                        create solutions that are both functional and thoughtful.
                         <br>
-                        Beyond tech, I'm passionate about community work and utilizing my technical skills to help the society evident through the initiatives I have undertaken. Apart from this, I am creative graphic designer, confident public speaker and a regular basketball player. I'm constantly learning, building, and collaborating — with the goal of shaping technology that’s responsible, creative, and impactful.
+                        Beyond tech, I'm passionate about community work and utilizing my technical skills to help the
+                        society evident through the initiatives I have undertaken. Apart from this, I am creative
+                        graphic designer, confident public speaker and a regular basketball player. I'm constantly
+                        learning, building, and collaborating — with the goal of shaping technology that’s responsible,
+                        creative, and impactful.
                     </p>
-                    
+
                 </div>
                 <div class="flex justify-center">
                     <img src="assets/images/pfp.jpeg" alt="Profile" class="rounded-lg shadow-xl w-full h-80">
@@ -194,8 +204,10 @@
                                     <h3 class="text-xl font-bold">Lotus Valley International School, Noida</h3>
                                     <span class="text-primary font-semibold">2019 - Present</span>
                                 </div>
-                                <p class="text-gray-300">&#8594; Currently in Grade XII- Physics, Chemistry, Mathematics, Computer Science and English</p>
-                                <p class="text-gray-300">&#8594; Grade X: 98% aggregate | 3rd in School | Subject topper of German and English</p>
+                                <p class="text-gray-300">&#8594; Currently in Grade XII- Physics, Chemistry,
+                                    Mathematics, Computer Science and English</p>
+                                <p class="text-gray-300">&#8594; Grade X: 98% aggregate | 3rd in School | Subject topper
+                                    of German and English</p>
                                 <p class="text-gray-300">&#8594; Grade IX: 95% aggregate | Subject topper of German</p>
                                 <p class="text-gray-300">&#8594; Three year scholar badge holder: 8th, 9th and 10th</p>
                             </div>
@@ -231,7 +243,8 @@
                                     <h3 class="text-xl font-bold">Miscellaneous</h3>
                                 </div>
                                 <p class="text-gray-300">&#8594; Passed A2 level in German by Goethe Institute</p>
-                                <p class="text-gray-300">&#8594; Medal of Excellence in National Science Olympiad 2022-23 </p>
+                                <p class="text-gray-300">&#8594; Medal of Excellence in National Science Olympiad
+                                    2022-23 </p>
                             </div>
                         </div>
                     </div>
@@ -242,33 +255,41 @@
 
     <!--Publication-->
     <section id="publication" class="py-20 bg-gray-800/50">
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Publication</h2>
-    
-    <div class="max-w-6xl mx-auto bg-gray-800/60 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row p-10">
-      
-      <!--Left: Image-->
-      <div class="md:w-1/3 w-full h-48 md:h-auto">
-        <img src="assets/certs/publication.jpg" alt="Publication Cover" class="w-full h-full object-contain">
-      </div>
-      
-      <!-- Right: Content -->
-      <div class="p-6 md:w-2/3 flex flex-col justify-between">
-        <div>
-          <h3 class="text-2xl font-bold text-white mb-2">Balancing Personalization and Privacy: Ethical Considerations in Conversational AI Systems</h3>
-          <p class="text-primary font-semibold mb-1">International Journal of Scientific Development and Research</p>
-          <p class="text-gray-400 text-sm mb-4">Published: August 2025</p>
-          <p class="text-gray-300 mb-4">
-            This paper explores ethical issues in conversational AI, focusing on how sensitive user data is used for personalization versus privacy. Based on a survey of 100 participants, it highlights concerns around consent, trust, and regulation, and compares governance frameworks in India, the U.S., and globally—concluding that transparent, user-centric practices are essential for responsible AI.
-          </p>
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Publication</h2>
+
+            <div
+                class="max-w-6xl mx-auto bg-gray-800/60 rounded-xl overflow-hidden shadow-lg flex flex-col md:flex-row p-10">
+
+                <!--Left: Image-->
+                <div class="md:w-1/3 w-full h-48 md:h-auto">
+                    <img src="assets/certs/publication.jpg" alt="Publication Cover"
+                        class="w-full h-full object-contain">
+                </div>
+
+                <!-- Right: Content -->
+                <div class="p-6 md:w-2/3 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Balancing Personalization and Privacy: Ethical
+                            Considerations in Conversational AI Systems</h3>
+                        <p class="text-primary font-semibold mb-1">International Journal of Scientific Development and
+                            Research</p>
+                        <p class="text-gray-400 text-sm mb-4">Published: August 2025</p>
+                        <p class="text-gray-300 mb-4">
+                            This paper explores ethical issues in conversational AI, focusing on how sensitive user data
+                            is used for personalization versus privacy. Based on a survey of 100 participants, it
+                            highlights concerns around consent, trust, and regulation, and compares governance
+                            frameworks in India, the U.S., and globally—concluding that transparent, user-centric
+                            practices are essential for responsible AI.
+                        </p>
+                    </div>
+                    <a href="https://ijsdr.org/papers/IJSDR2508136.pdf" target="_blank" rel="noopener noreferrer"
+                        class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
+                        Read Publication
+                    </a>
+                </div>
+            </div>
         </div>
-        <a href="https://ijsdr.org/papers/IJSDR2508136.pdf" target="_blank" rel="noopener noreferrer"
-           class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
-          Read Publication
-        </a>
-      </div>
-    </div>
-  </div>
     </section>
 
     <!-- Experience Section -->
@@ -278,10 +299,11 @@
             <div class="max-w-4xl mx-auto">
                 <div class="relative">
                     <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-primary"></div>
-                    
+
                     <!-- Experience Item 1 -->
                     <div class="relative flex items-center mb-12 timeline-item">
-                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
+                        <div
+                            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
                             <img src="assets/images/lvis.png" alt="Company Logo" class="w-12 h-12 object-contain">
                         </div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12">
@@ -290,11 +312,13 @@
                                 <h3 class="text-xl font-bold mb-2">IT Captain</h3>
                                 <p class="text-gray-300 mb-2">Lotus Valley International School</p>
                                 <p class="text-gray-400 mb-4">
-                                    I lead all technology-related initiatives in school, including tech coordination for school events and mentoring students in STEM adoption.
+                                    I lead all technology-related initiatives in school, including tech coordination for
+                                    school events and mentoring students in STEM adoption.
                                     Organized a Cybersecurity workshop for school students by noted expert.
                                 </p>
                                 <div class="flex items-center space-x-2">
-                                    <img src="assets/images/cert_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <img src="assets/images/cert_icon.png" alt="Certificate Icon"
+                                        class="object-contain inline-block" style="width: 24px; height: 24px;">
                                     <a href="assets/certs/it_captain.png" target="_blank"
                                         class="hover:underline text-green-400 font-semibold">
                                         Certificate
@@ -306,7 +330,8 @@
 
                     <!-- Experience Item 2 -->
                     <div class="relative flex items-center mb-12 timeline-item">
-                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
+                        <div
+                            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
                             <img src="assets/images/cvoter.jpg" alt="Company Logo" class="w-12 h-12 object-contain">
                         </div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pl-12 md:ml-auto">
@@ -314,9 +339,11 @@
                                 <span class="text-primary text-sm font-semibold">(Jan 2025 - May 2025)</span>
                                 <h3 class="text-xl font-bold mb-2">Data Engineering & Web Development Intern</h3>
                                 <p class="text-gray-300 mb-2">Cvoter News Services Pvt. Ltd.</p>
-                                <p class="text-gray-400 mb-4">Built a Flask-based dashboard connected to MS SQL Server, enabling dynamic visualization of 8,500+ survey responses.</p>
+                                <p class="text-gray-400 mb-4">Built a Flask-based dashboard connected to MS SQL Server,
+                                    enabling dynamic visualization of 8,500+ survey responses.</p>
                                 <div class="flex items-center space-x-2">
-                                    <img src="assets/images/letter_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <img src="assets/images/letter_icon.png" alt="Certificate Icon"
+                                        class="object-contain inline-block" style="width: 24px; height: 24px;">
                                     <a href="assets/certs/cvoter_lor.pdf" target="_blank"
                                         class="hover:underline text-green-400 font-semibold">
                                         LOR
@@ -328,7 +355,8 @@
 
                     <!-- Experience Item 3 -->
                     <div class="relative flex items-center mb-12 timeline-item">
-                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-black rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
+                        <div
+                            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-black rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
                             <img src="assets/images/kyren.jpeg" alt="Company Logo" class="w-12 h-12 object-contain">
                         </div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12">
@@ -336,11 +364,14 @@
                                 <span class="text-primary text-sm font-semibold">(May 2025 – Present)</span>
                                 <h3 class="text-xl font-bold mb-2">Chief Information Officer (CIO) </h3>
                                 <p class="text-gray-300 mb-2">Kyren Flow (Student-Led Fintech Startup) </p>
-                                <p class="text-gray-400 mb-4">Building a website and overseeing tech strategy for a fintech startup offering low-interest microloans to students via guardians (school initiative).</p>
+                                <p class="text-gray-400 mb-4">Building a website and overseeing tech strategy for a
+                                    fintech startup offering low-interest microloans to students via guardians (school
+                                    initiative).</p>
                                 <div class="flex items-center space-x-2">
-                                    <img src="assets/images/linkedin_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
-                                    <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_it-is-our-pleasure-to-announce-the-launch-activity-7353658775674777602-0NbE?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4" target="_blank"
-                                        class="hover:underline text-green-400 font-semibold">
+                                    <img src="assets/images/linkedin_icon.png" alt="Certificate Icon"
+                                        class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_it-is-our-pleasure-to-announce-the-launch-activity-7353658775674777602-0NbE?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"
+                                        target="_blank" class="hover:underline text-green-400 font-semibold">
                                         LinkedIn
                                     </a>
                                 </div>
@@ -350,7 +381,8 @@
 
                     <!--4-->
                     <div class="relative flex items-center mb-12 timeline-item">
-                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
+                        <div
+                            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
                             <img src="assets/images/prespl.jpg" alt="Company Logo" class="w-12 h-12 object-contain">
                         </div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pl-12 md:ml-auto">
@@ -358,9 +390,12 @@
                                 <span class="text-primary text-sm font-semibold">(July 2024 - Dec 2024)</span>
                                 <h3 class="text-xl font-bold mb-2">App Development Intern</h3>
                                 <p class="text-gray-300 mb-2">PRESPL</p>
-                                <p class="text-gray-400 mb-4">Developed an XML and Java-based app for biomass collection centres at PRESPL, enabling real-time data sync, role-based access, and validation to streamline inventory management across India.</p>
+                                <p class="text-gray-400 mb-4">Developed an XML and Java-based app for biomass collection
+                                    centres at PRESPL, enabling real-time data sync, role-based access, and validation
+                                    to streamline inventory management across India.</p>
                                 <div class="flex items-center space-x-2">
-                                    <img src="assets/images/letter_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <img src="assets/images/letter_icon.png" alt="Certificate Icon"
+                                        class="object-contain inline-block" style="width: 24px; height: 24px;">
                                     <a href="assets/certs/prespl_lor.pdf" target="_blank"
                                         class="hover:underline text-green-400 font-semibold">
                                         LOR
@@ -372,7 +407,8 @@
 
                     <!--5-->
                     <div class="relative flex items-center mb-12 timeline-item">
-                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
+                        <div
+                            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
                             <img src="assets/images/matra.jpg" alt="Company Logo" class="w-12 h-12 object-contain">
                         </div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12">
@@ -380,29 +416,35 @@
                                 <span class="text-primary text-sm font-semibold">(June 2024-Sept 2024)</span>
                                 <h3 class="text-xl font-bold mb-2">AI internship</h3>
                                 <p class="text-gray-300 mb-2">MATRA</p>
-                                <p class="text-gray-400">Gained hands-on experience in Artificial Intelligence and Data Science, enhancing my skills in data handling with Python and understanding foundational AI models.</p>
+                                <p class="text-gray-400">Gained hands-on experience in Artificial Intelligence and Data
+                                    Science, enhancing my skills in data handling with Python and understanding
+                                    foundational AI models.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- experience item 6 -->
                     <div class="relative flex items-center mb-12 timeline-item">
-                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
-                            <img src="assets/images/upstride.jpg" alt="Company Logo" class="w-12 h-12 object-contain scale-125">
+                        <div
+                            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
+                            <img src="assets/images/upstride.jpg" alt="Company Logo"
+                                class="w-12 h-12 object-contain scale-125">
                         </div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pl-12 md:ml-auto">
                             <div class="bg-gray-800 p-6 rounded-lg">
                                 <span class="text-primary text-sm font-semibold">(May 2025 – Present)</span>
                                 <h3 class="text-xl font-bold mb-2">CTO & Founding Member </h3>
                                 <p class="text-gray-300 mb-2">Upstride Education</p>
-                                <p class="text-gray-400">Co-founded a student-led nonprofit delivering tech education to underserved communities and building a website for the same.</p>
+                                <p class="text-gray-400">Co-founded a student-led nonprofit delivering tech education to
+                                    underserved communities and building a website for the same.</p>
                             </div>
                         </div>
                     </div>
 
                     <!--7-->
                     <div class="relative flex items-center mb-12 timeline-item">
-                        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
+                        <div
+                            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-primary overflow-hidden flex items-center justify-center">
                             <img src="assets/images/lvis.png" alt="Company Logo" class="w-12 h-12 object-contain">
                         </div>
                         <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12">
@@ -410,9 +452,12 @@
                                 <span class="text-primary text-sm font-semibold">(Sep 2024 – Mar 2025)</span>
                                 <h3 class="text-xl font-bold mb-2">Deputy Media Director – STEM OLC</h3>
                                 <p class="text-gray-300 mb-2">Lotus Valley International School</p>
-                                <p class="text-gray-400 mb-4">Promoted STEM workshops by managing outreach, communications, and content design. Helped connect students with industry experts through interactive webinars and sessions.</p>
+                                <p class="text-gray-400 mb-4">Promoted STEM workshops by managing outreach,
+                                    communications, and content design. Helped connect students with industry experts
+                                    through interactive webinars and sessions.</p>
                                 <div class="flex items-center space-x-2">
-                                    <img src="assets/images/webinar_icon.png" alt="Certificate Icon" class="object-contain inline-block" style="width: 24px; height: 24px;">
+                                    <img src="assets/images/webinar_icon.png" alt="Certificate Icon"
+                                        class="object-contain inline-block" style="width: 24px; height: 24px;">
                                     <a href="assets/images/olc.jpeg" target="_blank"
                                         class="hover:underline text-green-400 font-semibold">
                                         Workshop
@@ -431,7 +476,7 @@
         <div class="container mx-auto px-6 mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-center gradient-text">Projects</h2>
         </div>
-        
+
         <div class="projects-container">
             <!-- Project 1 -->
             <div class="project-card">
@@ -443,32 +488,45 @@
                                 <span class="h-3 w-3 bg-yellow-500 rounded-full"></span>
                                 <span class="h-3 w-3 bg-green-500 rounded-full"></span>
                             </div>
-                            <h3 class="text-[18px] font-semibold text-[#00ffc8] text-center flex-1">CVOTER Survey Data Dashboard</h3>
+                            <h3 class="text-[18px] font-semibold text-[#00ffc8] text-center flex-1">CVOTER Survey Data
+                                Dashboard</h3>
                             <div class="w-12"></div>
                         </div>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-300 mb-4">
-                                Designed and developed a full-stack dashboard during my internship at CVOTER to visualize over 8,500 rows of public opinion data. Integrated MS SQL backend with Flask, automated Excel data ingestion, and implemented filterable, sortable survey views. Added dynamic satisfaction trend graphs using Highcharts for clear visual insights.
+                                Designed and developed a full-stack dashboard during my internship at CVOTER to
+                                visualize over 8,500 rows of public opinion data. Integrated MS SQL backend with Flask,
+                                automated Excel data ingestion, and implemented filterable, sortable survey views. Added
+                                dynamic satisfaction trend graphs using Highcharts for clear visual insights.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Python</span>
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">MS SQL</span>
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Flask</span>
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Jinja2</span>
-                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Full Stack Web Development</span>
+                                <span
+                                    class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">MS
+                                    SQL</span>
+                                <span
+                                    class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Flask</span>
+                                <span
+                                    class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Jinja2</span>
+                                <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Full Stack
+                                    Web Development</span>
                             </div>
                             <div class="flex space-x-4">
-                                <a target="_blank" href="https://github.com/Parantap-Mishra/CVOTER.git" class="text-purple-400 hover:underline transition-colors">
+                                <a target="_blank" href="https://github.com/Parantap-Mishra/CVOTER.git"
+                                    class="text-purple-400 hover:underline transition-colors">
                                     <i class="fab fa-github mr-2"></i>Source Code
                                 </a>
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-purple-500 transition-colors">
-                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-cvoter-survey-data-activity-7346882456400105474-xxq4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img src="assets/images/cvoter_project.png"></a>
+                            <div
+                                class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-purple-500 transition-colors">
+                                <a target="_blank"
+                                    href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-cvoter-survey-data-activity-7346882456400105474-xxq4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img
+                                        src="assets/images/cvoter_project.png"></a>
                             </div>
                         </div>
                     </div>
@@ -489,29 +547,38 @@
                             <div class="w-12"></div>
                         </div>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-300 mb-4">
-                                Designed an amphibious emergency-response vehicle prototype for flood-prone regions. A sensor-triggered vehicle that inflates 
-                                and floats when water levels rise. Specialized spoke wheels enable navigation on both land and water. Presented at 
-                                DesignTrek (National Institute of Design) and Kriti (Kothari School), gaining valuable feedback to refine our prototype for real-world disaster 
+                                Designed an amphibious emergency-response vehicle prototype for flood-prone regions. A
+                                sensor-triggered vehicle that inflates
+                                and floats when water levels rise. Specialized spoke wheels enable navigation on both
+                                land and water. Presented at
+                                DesignTrek (National Institute of Design) and Kriti (Kothari School), gaining valuable
+                                feedback to refine our prototype for real-world disaster
                                 deployment.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Arduino</span>
-                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Robotics</span>
-                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Design Thinking</span>
+                                <span
+                                    class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Robotics</span>
+                                <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Design
+                                    Thinking</span>
                             </div>
                             <div class="flex space-x-4">
-                                <a target="_blank" href="https://github.com/Parantap-Mishra/PERCY.git" class="text-blue-400 hover:underline transition-colors">
+                                <a target="_blank" href="https://github.com/Parantap-Mishra/PERCY.git"
+                                    class="text-blue-400 hover:underline transition-colors">
                                     <i class="fab fa-github mr-2"></i>Link
                                 </a>
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-58 flex items-center justify-center hover:border-blue-500 transition-colors">
-                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_showcasing-percy-at-kriti-a-journey-of-innovation-activity-7275195535139975169-YCDF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img src="assets/images/percy.jpeg" class="w-full h-full object-cover"></a>
+                            <div
+                                class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-58 flex items-center justify-center hover:border-blue-500 transition-colors">
+                                <a target="_blank"
+                                    href="https://www.linkedin.com/posts/parantap-mishra-141770297_showcasing-percy-at-kriti-a-journey-of-innovation-activity-7275195535139975169-YCDF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img
+                                        src="assets/images/percy.jpeg" class="w-full h-full object-cover"></a>
                             </div>
                         </div>
                     </div>
@@ -532,27 +599,38 @@
                             <div class="w-12"></div>
                         </div>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-300 mb-4">
-                                Built an automated attendance system using facial recognition. The system captures 30 face samples per student, trains a recognition model, and logs attendance with timestamps. Currently preparing to present it to school authorities for classroom integration. Developed end-to-end with Python and OpenCV. 
+                                Built an automated attendance system using facial recognition. The system captures 30
+                                face samples per student, trains a recognition model, and logs attendance with
+                                timestamps. Currently preparing to present it to school authorities for classroom
+                                integration. Developed end-to-end with Python and OpenCV.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Python</span>
-                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Tkinter</span>
-                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">OpenCV</span>
-                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Pandas</span>
+                                <span
+                                    class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span
+                                    class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Tkinter</span>
+                                <span
+                                    class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">OpenCV</span>
+                                <span
+                                    class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Pandas</span>
                             </div>
                             <div class="flex space-x-4">
-                                <a target="_blank" href="https://github.com/Parantap-Mishra/RollCall.git" class="text-green-400 hover:underline transition-colors">
+                                <a target="_blank" href="https://github.com/Parantap-Mishra/RollCall.git"
+                                    class="text-green-400 hover:underline transition-colors">
                                     <i class="fab fa-github mr-2"></i>Source Code
                                 </a>
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-green-500 transition-colors">
-                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-rollcall-automation-activity-7347503207281041408-l6vB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img src="assets/images/rollcall.jpg" class="w-full h-full object-fill"></a>
+                            <div
+                                class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-green-500 transition-colors">
+                                <a target="_blank"
+                                    href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-rollcall-automation-activity-7347503207281041408-l6vB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img
+                                        src="assets/images/rollcall.jpg" class="w-full h-full object-fill"></a>
                             </div>
                         </div>
                     </div>
@@ -573,30 +651,40 @@
                             <div class="w-12"></div>
                         </div>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-300 mb-4">
-                                Data Minimization & Redaction Tool: Developed a local Flask-based tool to scan .txt and .csv files for sensitive information and redact it using regex and NLP (spaCy). Replaces detected data with [REDACTED]. Inspired by my research on ethical concerns in AI data handling.
+                                Data Minimization & Redaction Tool: Developed a local Flask-based tool to scan .txt and
+                                .csv files for sensitive information and redact it using regex and NLP (spaCy). Replaces
+                                detected data with [REDACTED]. Inspired by my research on ethical concerns in AI data
+                                handling.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span
+                                    class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Python</span>
                                 <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">NLP</span>
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Flask</span>
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Full Stack Web Development</span>
+                                <span
+                                    class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Flask</span>
+                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Full Stack
+                                    Web Development</span>
                             </div>
                             <div class="flex space-x-4">
-                                <a target="_blank" href="https://github.com/Parantap-Mishra/Redactify.git" class="text-yellow-400 hover:underline transition-colors">
+                                <a target="_blank" href="https://github.com/Parantap-Mishra/Redactify.git"
+                                    class="text-yellow-400 hover:underline transition-colors">
                                     <i class="fab fa-github mr-2"></i>Source Code
                                 </a>
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-yellow-500 transition-colors">
-                                <a target="_blank" href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-redactify-data-activity-7349408162979991552-kCWM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img src="assets/images/redactify.jpg" class="w-full h-full object-fill"></a>
+                            <div
+                                class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl w-full h-48 flex items-center justify-center hover:border-yellow-500 transition-colors">
+                                <a target="_blank"
+                                    href="https://www.linkedin.com/posts/parantap-mishra-141770297_im-happy-to-share-this-redactify-data-activity-7349408162979991552-kCWM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"><img
+                                        src="assets/images/redactify.jpg" class="w-full h-full object-fill"></a>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -615,24 +703,31 @@
                             <div class="w-12"></div>
                         </div>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <p class="text-gray-300 mb-4">
-                                Founded Verbinder as a personal project to enhance opportunities for freelancers. Verbinder provides this by matching skilled freelancers with projects while ensuring quality. Placed 4th out of 25 teams at a mock start-up pitching competetion for this agency at Rani Laxmibai Youth Conclave.
+                                Founded Verbinder as a personal project to enhance opportunities for freelancers.
+                                Verbinder provides this by matching skilled freelancers with projects while ensuring
+                                quality. Placed 4th out of 25 teams at a mock start-up pitching competetion for this
+                                agency at Rani Laxmibai Youth Conclave.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Entrepreneurship</span>
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Pitching</span>
-                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Business Strategy</span>
+                                <span
+                                    class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Entrepreneurship</span>
+                                <span
+                                    class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Pitching</span>
+                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">Business
+                                    Strategy</span>
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <div class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl max-w-2xl h-48 flex items-center justify-center hover:border-blue-500 transition-colors">
+                            <div
+                                class="bg-gray-800 border-2 border-dashed border-gray-700 rounded-xl max-w-2xl h-48 flex items-center justify-center hover:border-blue-500 transition-colors">
                                 <img src="assets/images/verbinder.png" class="w-full h-full object-fill">
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -790,7 +885,8 @@
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Courses & Certification</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 1 -->
-                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                <article
+                    class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
                         <img src="assets/images/iit.png" class="w-full h-full object-cover" alt="IIT Logo">
                     </div>
@@ -806,15 +902,19 @@
                             Credential ID: 97YGWNAQ3WSHNKC
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-primary font-semibold"><a href="assets/certs/ethical hacking.jpg" target="_blank" rel="noopener noreferrer">View Certificate</a></span>
+                            <span class="text-primary font-semibold"><a href="assets/certs/ethical hacking.jpg"
+                                    target="_blank" rel="noopener noreferrer">View Certificate</a></span>
                         </div>
                     </div>
                 </article>
 
                 <!-- 2 -->
-                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
-                        <img src="assets/images/technocon.png" class="w-full h-full object-cover scale-[1.75]" alt="IIT Logo">
+                <article
+                    class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/technocon.png" class="w-full h-full object-cover scale-[1.75]"
+                            alt="IIT Logo">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
@@ -828,14 +928,17 @@
                             Credential ID: WX4SFLRUMUTSQVX
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-primary font-semibold"><a href="assets/certs/entrepreneurship.jpg" target="_blank" rel="noopener noreferrer">View Certificate</a></span>
+                            <span class="text-primary font-semibold"><a href="assets/certs/entrepreneurship.jpg"
+                                    target="_blank" rel="noopener noreferrer">View Certificate</a></span>
                         </div>
                     </div>
                 </article>
 
                 <!-- 3 -->
-                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
+                <article
+                    class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
                         <img src="assets/images/goethe.png" class="w-full h-full object-cover" alt="IIT Logo">
                     </div>
                     <div class="p-6">
@@ -850,13 +953,15 @@
                             Credential ID: 1490-AA2J-0001536972
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-primary font-semibold"><a href="assets/certs/goethe.jpg" target="_blank" rel="noopener noreferrer">View Certificate</a></span>
+                            <span class="text-primary font-semibold"><a href="assets/certs/goethe.jpg" target="_blank"
+                                    rel="noopener noreferrer">View Certificate</a></span>
                         </div>
                     </div>
                 </article>
 
                 <!--  4 -->
-                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                <article
+                    class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
                     <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
                         <img src="assets/images/open-weaver.jpg" class="w-full h-full object-cover" alt="IIT Logo">
                     </div>
@@ -872,14 +977,17 @@
                             Credential ID: 29240864655250
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-primary font-semibold"><a href="assets/certs/html.jpg" target="_blank" rel="noopener noreferrer">View Certificate</a></span>
+                            <span class="text-primary font-semibold"><a href="assets/certs/html.jpg" target="_blank"
+                                    rel="noopener noreferrer">View Certificate</a></span>
                         </div>
                     </div>
                 </article>
 
                 <!-- 5 -->
-                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
+                <article
+                    class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
                         <img src="assets/images/codingal.png" class="w-full h-full object-cover" alt="IIT Logo">
                     </div>
                     <div class="p-6">
@@ -894,14 +1002,17 @@
                             Credential ID: 96747eb7daddf
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-primary font-semibold"><a href="assets/certs/codingal.png" target="_blank">View Certificate</a></span>
+                            <span class="text-primary font-semibold"><a href="assets/certs/codingal.png"
+                                    target="_blank">View Certificate</a></span>
                         </div>
                     </div>
                 </article>
 
                 <!-- 6 -->
-                <article class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
+                <article
+                    class="bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                    <div
+                        class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
                         <img src="assets/images/vigyantram.jpg" class="w-full h-full object-cover" alt="IIT Logo">
                     </div>
                     <div class="p-6">
@@ -916,7 +1027,8 @@
                             Credential ID: SCP/22/224
                         </p>
                         <div class="flex items-center justify-between">
-                            <span class="text-primary font-semibold"><a href="assets/certs/vigyantram.png" target="_blank" rel="noopener noreferrer">View Certificate</a></span>
+                            <span class="text-primary font-semibold"><a href="assets/certs/vigyantram.png"
+                                    target="_blank" rel="noopener noreferrer">View Certificate</a></span>
                         </div>
                     </div>
                 </article>
@@ -928,7 +1040,7 @@
     <section id="awards" class="py-20">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Achievements & Awards</h2>
-    
+
             <div class="max-w-5xl mx-auto space-y-8">
                 <!-- Card 1-->
                 <div class="bg-gray-800/50 rounded-lg overflow-hidden flex flex-col md:flex-row relative">
@@ -945,12 +1057,13 @@
                     <!-- Right: Text Content -->
                     <div class="md:w-3/4 w-full p-6 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold mb-2 text-white">CODEConquest, Techtonik 4.0 Interschool Tech Fest</h3>
-            
+                            <h3 class="text-2xl font-bold mb-2 text-white">CODEConquest, Techtonik 4.0 Interschool Tech
+                                Fest</h3>
+
                             <!-- Award icon with position -->
                             <p class="text-gray-300 mb-2 flex items-center gap-2">
-                            <i class="fas fa-award text-yellow-400"></i>
-                             Secured 3rd Position
+                                <i class="fas fa-award text-yellow-400"></i>
+                                Secured 3rd Position
                             </p>
 
                             <!-- Location icon with school -->
@@ -960,12 +1073,16 @@
                             </p>
 
                             <p>
-                                In this event, we were challenged to write efficient python programs based on given problem statements linked to Sustainable Development Goals (SDGs) under time constraints.
+                                In this event, we were challenged to write efficient python programs based on given
+                                problem statements linked to Sustainable Development Goals (SDGs) under time
+                                constraints.
                             </p>
                         </div>
 
                         <!-- Button Link -->
-                        <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_i-recently-secured-3rd-position-in-codeconquest-activity-7351209786933202944-RliJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
+                        <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_i-recently-secured-3rd-position-in-codeconquest-activity-7351209786933202944-RliJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
                             View on LinkedIn
                         </a>
                     </div>
@@ -987,11 +1104,11 @@
                     <div class="md:w-3/4 w-full p-6 flex flex-col justify-between">
                         <div>
                             <h3 class="text-2xl font-bold mb-2 text-white">Inter-house basketball competition</h3>
-            
+
                             <!-- Award icon with position -->
                             <p class="text-gray-300 mb-2 flex items-center gap-2">
-                            <i class="fas fa-award text-yellow-400"></i>
-                             Secured 1st Position
+                                <i class="fas fa-award text-yellow-400"></i>
+                                Secured 1st Position
                             </p>
 
                             <!-- Location icon with school -->
@@ -1001,12 +1118,14 @@
                             </p>
 
                             <p>
-                                Won the gold medal representing my house in the school’s Inter-House Basketball Tournament. Participated in numerous interschool competetions as part of school team.
+                                Won the gold medal representing my house in the school’s Inter-House Basketball
+                                Tournament. Participated in numerous interschool competetions as part of school team.
                             </p>
                         </div>
 
                         <!-- Button Link -->
-                        <a href="assets/certs/bb.jpg" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
+                        <a href="assets/certs/bb.jpg" target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
                             View Certificate
                         </a>
                     </div>
@@ -1027,12 +1146,13 @@
                     <!-- Right: Text Content -->
                     <div class="md:w-3/4 w-full p-6 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-2xl font-bold mb-2 text-white">Top Coders: Technolympics Python Hackathon</h3>
-            
+                            <h3 class="text-2xl font-bold mb-2 text-white">Top Coders: Technolympics Python Hackathon
+                            </h3>
+
                             <!-- Award icon with position -->
                             <p class="text-gray-300 mb-2 flex items-center gap-2">
-                            <i class="fas fa-award text-yellow-400"></i>
-                             Secured 3rd Position
+                                <i class="fas fa-award text-yellow-400"></i>
+                                Secured 3rd Position
                             </p>
 
                             <!-- Location icon with school -->
@@ -1042,12 +1162,15 @@
                             </p>
 
                             <p>
-                                The event challenged us to solve three problems using Python, involving pattern analysis and simulating complex mathematical equations under time constraints. 
+                                The event challenged us to solve three problems using Python, involving pattern analysis
+                                and simulating complex mathematical equations under time constraints.
                             </p>
                         </div>
 
                         <!-- Button Link -->
-                        <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_technolympics-lotusvalleynoida-activity-7271888652891250688-C00W?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
+                        <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_technolympics-lotusvalleynoida-activity-7271888652891250688-C00W?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
                             View on LinkedIn
                         </a>
                     </div>
@@ -1069,11 +1192,11 @@
                     <div class="md:w-3/4 w-full p-6 flex flex-col justify-between">
                         <div>
                             <h3 class="text-2xl font-bold mb-2 text-white">Hackathon Havoc, Technothon</h3>
-            
+
                             <!-- Award icon with position -->
                             <p class="text-gray-300 mb-2 flex items-center gap-2">
-                            <i class="fas fa-award text-yellow-400"></i>
-                             Secured 3rd Position
+                                <i class="fas fa-award text-yellow-400"></i>
+                                Secured 3rd Position
                             </p>
 
                             <!-- Location icon with school -->
@@ -1083,12 +1206,15 @@
                             </p>
 
                             <p>
-                                The competetion involved python programming to decipher encrypted codes and solve matrix related problems against 40+ teams from multiple schools in Delhi NCR region.
+                                The competetion involved python programming to decipher encrypted codes and solve matrix
+                                related problems against 40+ teams from multiple schools in Delhi NCR region.
                             </p>
                         </div>
 
                         <!-- Button Link -->
-                        <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_thrilled-to-share-my-achievement-at-technothon-activity-7267596930220720129-Fbq1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
+                        <a href="https://www.linkedin.com/posts/parantap-mishra-141770297_thrilled-to-share-my-achievement-at-technothon-activity-7267596930220720129-Fbq1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfWe8EBa4Xwaf7vj4OldtxCnnAkcByuKR4"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-block mt-4 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-md transition">
                             View on LinkedIn
                         </a>
                     </div>
@@ -1099,227 +1225,96 @@
 
     <!--Community-->
     <section id="comm" class="py-20 bg-gray-800/50">
-        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Giving back to the commutnity</h2>
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <!-- 1 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <video class="w-full h-84 object-cover"
-                    controls preload="metadata"
-                    poster="assets/images/thumbnail1.png">
-                <source src="assets/Videos/Video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Giving back to the commutnity</h2>
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- 1 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="relative group">
+                <!-- Google Drive iframe -->
+                <iframe src="https://www.youtube.com/embed/BQdrpvOk-3k?si=Yh-4teKOIA3TeiAe"
+                    class="w-full h-80" allow="autoplay; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
             <div class="p-6">
-                <h3 class="text-xl font-bold text-green-400 mb-2">Boosting Sales: Onboarding a Momo Vendor on Zomato</h3>
-                <p class="text-gray-300">Our neighbourhood food cart seller was restricted to sales in the evenings. Inspite of adequate capacity, sales were constrained by low footfalls and bad weather during daytime.
-                    I onboarded them onto Zomato (food delivery app) guiding him through documentation,creation of online menu complete with images, competitive pricing and required Certifications. 
-                    I had to overcome their intnial hestitation and fear of technology by persistent handholding and continued guidance. 
-                    This resulted in increased sales by 15% within 20 days. Further improvement in sales has been planned by onboarding onto the second food delivery app-Swiggy and increasing their online presence.</p>
+                <h3 class="text-xl font-bold text-green-400 mb-2">Boosting Sales: Onboarding a Momo Vendor on Zomato
+                </h3>
+                <p class="text-gray-300">Our neighborhood food cart seller was restricted to sales in the evenings. In spite of adequate
+                    capacity, sales were constrained by low footfalls and bad weather during daytime. I onboarded them onto Zomato (food
+                    delivery app) guiding him through documentation, creation of online menu complete with images, competitive pricing
+                    and required Certifications. I had to overcome their initial hesitation and fear of technology by persistent
+                    handholding and continued guidance. This resulted in increased sales by 15% within 20 days. Further improvement in
+                    sales has been planned by onboarding onto the second food delivery app-Swiggy and increasing their online presence.
+                </p>
             </div>
-            </div>
+        </div>
 
-            <!-- 2 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <video class="w-full h-84 object-cover"
-                    controls preload="metadata"
-                    poster="assets/images/thumbnail 2.png">
-                <source src="assets/Videos/Video 2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <!-- 2 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="relative group">
+                <!-- Google Drive iframe -->
+                <iframe src="https://www.youtube.com/embed/1n_mA3QEhkc?si=JTzhIKk2k0QVV_t_" title="YouTube video player"
+                    class="w-full h-80" allow="autoplay; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
             <div class="p-6">
-                <h3 class="text-xl font-bold text-green-400 mb-2">From Notebook to Smartphone: Empowering a Vendor with Digital Tools</h3>
-                <p class="text-gray-300">Our local vegetable vendor used his scrappy notebook and bits of paper for keeping track of payments, causing him frequent financial losses.
-                    He was also struggling to recover his dues and manage his inventory efficiently. I introduced him to Khatabook, a simple, reliable accounting app 
-                    also available in Hindi, his native language. I installed the app which facilitated keeping track of his dues, even sending sms reminders to regular customers stored flat number-wise.
-                    Inventory management section helped him track his bulk purchases and payments to the whole sellers.
-                     The most difficult part was adoption as he kept reverting back to his old scrap paper system. I had to send an hour everyday for a week till he finally started consistently using it. 
-                     The sms reminders was the one facility that had him hooked with his customers now remotely paying him via UPI which credited money directly to his bank account. 
-                     
-                     A dedicated convert, he had much tighter control over his business now with near zero losses.
+                <h3 class="text-xl font-bold text-green-400 mb-2">From Notebook to Smartphone: Empowering a Vendor
+                    with Digital Tools</h3>
+                <p class="text-gray-300">Our local vegetable vendor used his scrappy notebook and bits of paper for keeping track of payments, causing him frequent financial losses. He was also struggling to recover his dues and manage his inventory efficiently. I introduced him to Khatabook, a simple, reliable accounting app also available in Hindi, his native language. I installed the app which facilitated keeping track of his dues, even sending SMS reminders to regular customers stored flat number-wise. Inventory management section helped him track his bulk purchases and payments to the whole sellers. The most difficult part was adoption as he kept reverting back to his old scrap paper system. I had to send an hour everyday for a week till he finally started consistently using it. The SMS reminders was the one facility that had him hooked with his customers now remotely paying him via UPI which credited money directly to his bank account. A dedicated convert, he had much tighter control over his business now with near zero losses.</p>
 
             </div>
-            </div>
+        </div>
 
-            <!-- 3 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <video class="w-full h-84 object-cover"
-                    controls preload="metadata"
-                    poster="assets/images/t3.png">
-                <source src="assets/Videos/Video 3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <!-- 3 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="relative group">
+                <!-- Google Drive iframe -->
+                <iframe src="https://www.youtube.com/embed/3cQCZIDVVNA?si=Q7VMpNmTYs6jGhj2"
+                    class="w-full h-80" allow="autoplay; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
             <div class="p-6">
-                <h3 class="text-xl font-bold text-green-400 mb-2">Helping a Grocery Store Reach Customers with Digital Marketing</h3>
-                <p class="text-gray-300">The local grocery storekeeper had attempted sourcing organic grocery items from his native state Uttrakhand, however frequent unsold inventory restricted him from stocking it in bulk.
-                    There was adequate demand once the residents were made aware of the availabilty and health benefits of the items. Not only would sales of these organic products increase his profit, local farmers from remote villages of his state would also benefit financinally. 
-                    To address this, I created Instagram and Facebook pages for these products, showcasing their health benefits and pricing. I also designed e-posters for them.
-                     I shared these on our society managemnt app and WhatsApp groups to spread awareness. 
-                     Regular efforts increased traction,resulted in increased enquiries and boosting sales of those products.  It exemplified how
-                      simple digital promotion can help local businesses thrive and expand their market.</p>
+                <h3 class="text-xl font-bold text-green-400 mb-2">Helping a Grocery Store Reach Customers with
+                    Digital Marketing</h3>
+                <p class="text-gray-300">The local grocery storekeeper had attempted sourcing organic grocery items
+                    from his native state Uttrakhand, however frequent unsold inventory restricted him from stocking
+                    it in bulk.
+                    There was adequate demand once the residents were made aware of the availabilty and health
+                    benefits of the items. Not only would sales of these organic products increase his profit, local
+                    farmers from remote villages of his state would also benefit financinally.
+                    To address this, I created Instagram and Facebook pages for these products, showcasing their
+                    health benefits and pricing. I also designed e-posters for them.
+                    I shared these on our society managemnt app and WhatsApp groups to spread awareness.
+                    Regular efforts increased traction,resulted in increased enquiries and boosting sales of those
+                    products. It exemplified how
+                    simple digital promotion can help local businesses thrive and expand their market.</p>
             </div>
-            </div>
+        </div>
 
-            <!-- 4 -->
-            <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <img src="assets/certs/codeConq.jpg" alt="Community Service Photo"
-                class="w-full h-84 object-cover">
+        <!-- 4 -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <a target="_blank" href="assets/certs/interact_cert.jpg"><img src="assets/certs/interact_cert.jpg" alt="Community Service Photo" class="w-full h-80 object-contain"></a>
             <div class="p-6">
                 <h3 class="text-xl font-bold text-green-400 mb-2">Member of School's Interact Club</h3>
-                <p class="text-gray-300">As a member of the Rotary Interact Club (affiliated with Rotary International) from Grade 9 to 11, 
-                    I actively contributed to raising awareness for social causes and leading fundraising campaigns. 
-                    I participated in numerous community initiatives, including donation drives, while creating 
-                    engaging posts, reels, detailed reports, and other essential materials to support the club’s initiatives. 
-                    As the Social Media Incharge, I managed the club’s digital presence across platforms, ensuring our 
-                    activities and service projects reached a wider audience. Of particular satisfaction was the campaign to increase 
-                awareness abount menstrual hygiene in certain underprivileged areas of the city.</p>
+                <p class="text-gray-300">As a member of the Rotary Interact Club (affiliated with Rotary
+                    International) from Grade 9 to 11,
+                    I actively contributed to raising awareness for social causes and leading fundraising campaigns.
+                    I participated in numerous community initiatives, including donation drives, while creating
+                    engaging posts, reels, detailed reports, and other essential materials to support the club’s
+                    initiatives.
+                    As the Social Media Incharge, I managed the club’s digital presence across platforms, ensuring
+                    our
+                    activities and service projects reached a wider audience. Of particular satisfaction was the
+                    campaign to increase
+                    awareness abount menstrual hygiene in certain underprivileged areas of the city.</p>
             </div>
-            </div>
-
         </div>
+
+    </div>
     </section>
 
-    <!-- Extracurriculars / Get to know me -->
-    <section id="extras" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
-                Get to meet my other side
-            </h2>
-
-            <!-- Block A -->
-            <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
-            <!-- Left: write-up -->
-            <div>
-                <h3 class="text-2xl font-semibold mb-4 text-green-400">Off the court, on the code</h3>
-                <p class="text-gray-300 leading-relaxed">
-                Short write-up goes here. Talk about sports, clubs, leadership, or anything that shows who you are
-                beyond academics & code. This is a placeholder paragraph you can replace.
-                </p>
-            </div>
-
-            <!-- Right: 2x2 collage (group A) -->
-            <!-- Block A: 2x2 Collage -->
-        <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
-            <div class="w-full aspect-square overflow-hidden rounded-lg">
-                <img src="assets/images/goethe.png" 
-                    class="w-full h-full object-cover" alt="Basketball 1">
-            </div>
-            <div class="w-full aspect-square overflow-hidden rounded-lg">
-                <img src="assets/images/goethe.png" 
-                    class="w-full h-full object-cover" alt="Basketball 2">
-            </div>
-            <div class="w-full aspect-square overflow-hidden rounded-lg">
-                <img src="assets/images/goethe.png" 
-                    class="w-full h-full object-cover" alt="Basketball 3">
-            </div>
-            <div class="w-full aspect-square overflow-hidden rounded-lg">
-                <img src="assets/images/goethe.png" 
-                    class="w-full h-full object-cover" alt="Basketball 4">
-            </div>
-        </div>
 
 
-            <!-- Block B -->
-            <div class="grid md:grid-cols-2 gap-10 items-start mb-20">
-            <!-- Left: 2x2 collage (group B) -->
-            <div class="order-2 md:order-1 rounded-2xl overflow-hidden ring-1 ring-white/5 bg-gray-800/40">
-                <div class="collage grid grid-cols-2 gap-2 p-2 h-[420px] sm:h-[480px] md:h-[520px]">
-                <button class="tile group" data-gallery="extras-b" data-index="0" data-src="https://picsum.photos/id/1055/1200/800" aria-label="Open image 1">
-                    <img loading="lazy" src="https://picsum.photos/id/1055/600/400" alt="Placeholder alt text B1"
-                        class="w-full h-full object-contain bg-gray-900 rounded-lg transition-transform group-hover:scale-[1.02]">
-                </button>
-                <button class="tile group" data-gallery="extras-b" data-index="1" data-src="https://picsum.photos/id/1065/1200/800" aria-label="Open image 2">
-                    <img loading="lazy" src="https://picsum.photos/id/1065/600/400" alt="Placeholder alt text B2"
-                        class="w-full h-full object-contain bg-gray-900 rounded-lg transition-transform group-hover:scale-[1.02]">
-                </button>
-                <button class="tile group" data-gallery="extras-b" data-index="2" data-src="https://picsum.photos/id/1075/1200/800" aria-label="Open image 3">
-                    <img loading="lazy" src="https://picsum.photos/id/1075/600/400" alt="Placeholder alt text B3"
-                        class="w-full h-full object-contain bg-gray-900 rounded-lg transition-transform group-hover:scale-[1.02]">
-                </button>
-                <button class="tile group" data-gallery="extras-b" data-index="3" data-src="https://picsum.photos/id/1085/1200/800" aria-label="Open image 4">
-                    <img loading="lazy" src="https://picsum.photos/id/1085/600/400" alt="Placeholder alt text B4"
-                        class="w-full h-full object-contain bg-gray-900 rounded-lg transition-transform group-hover:scale-[1.02]">
-                </button>
-                </div>
-            </div>
-
-            <!-- Right: write-up -->
-            <div class="order-1 md:order-2">
-                <h3 class="text-2xl font-semibold mb-4 text-green-400">Beyond the classroom</h3>
-                <p class="text-gray-300 leading-relaxed">
-                Second short write-up goes here. Share a story, a reflective note, or anything that shows your personality.
-                Placeholder text—replace with your copy.
-                </p>
-            </div>
-            </div>
-
-            <!-- Misc + hover captions -->
-            <h3 class="text-2xl font-semibold mb-6 text-green-400">Misc</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <!-- Each tile shows caption on hover/tap -->
-            <div class="relative group rounded-xl overflow-hidden ring-1 ring-white/5 bg-gray-800">
-                <button class="w-full h-full tap-caption" aria-label="Show caption">
-                <img loading="lazy" src="https://picsum.photos/id/109/600/600" alt="Placeholder alt text M1"
-                    class="w-full h-full object-cover">
-                <div class="caption absolute inset-x-0 bottom-0 p-3 text-sm text-white bg-black/60
-                            backdrop-blur-sm opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0
-                            transition-all">
-                    Placeholder caption about this image 1
-                </div>
-                </button>
-            </div>
-            <div class="relative group rounded-xl overflow-hidden ring-1 ring-white/5 bg-gray-800">
-                <button class="w-full h-full tap-caption" aria-label="Show caption">
-                <img loading="lazy" src="https://picsum.photos/id/110/600/600" alt="Placeholder alt text M2"
-                    class="w-full h-full object-cover">
-                <div class="caption absolute inset-x-0 bottom-0 p-3 text-sm text-white bg-black/60 backdrop-blur-sm
-                            opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
-                    Placeholder caption about this image 2
-                </div>
-                </button>
-            </div>
-            <div class="relative group rounded-xl overflow-hidden ring-1 ring-white/5 bg-gray-800">
-                <button class="w-full h-full tap-caption" aria-label="Show caption">
-                <img loading="lazy" src="https://picsum.photos/id/111/600/600" alt="Placeholder alt text M3"
-                    class="w-full h-full object-cover">
-                <div class="caption absolute inset-x-0 bottom-0 p-3 text-sm text-white bg-black/60 backdrop-blur-sm
-                            opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
-                    Placeholder caption about this image 3
-                </div>
-                </button>
-            </div>
-            <div class="relative group rounded-xl overflow-hidden ring-1 ring-white/5 bg-gray-800">
-                <button class="w-full h-full tap-caption" aria-label="Show caption">
-                <img loading="lazy" src="https://picsum.photos/id/112/600/600" alt="Placeholder alt text M4"
-                    class="w-full h-full object-cover">
-                <div class="caption absolute inset-x-0 bottom-0 p-3 text-sm text-white bg-black/60 backdrop-blur-sm
-                            opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
-                    Placeholder caption about this image 4
-                </div>
-                </button>
-            </div>
-            </div>
-        </div>
-
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
-            <button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-primary" id="lb-close" aria-label="Close (Esc)">
-            <i class="fas fa-times"></i>
-            </button>
-
-            <button class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-primary" id="lb-prev" aria-label="Previous (←)">
-            <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <button class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-primary" id="lb-next" aria-label="Next (→)">
-            <i class="fas fa-chevron-right"></i>
-            </button>
-
-            <div class="max-w-6xl w-full">
-            <img id="lb-image" src="" alt="Expanded image" class="mx-auto max-h-[80vh] w-auto rounded-xl shadow-2xl" />
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20">
@@ -1339,7 +1334,7 @@
                                     <p class="font-semibold">parantap098@gmail.com</p>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-center space-x-4">
                                 <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
                                     <i class="fas fa-phone text-gray-900"></i>
@@ -1354,38 +1349,38 @@
 
                     <!-- Contact Form -->
                     <div>
-  <form id="contact-form" action="https://formspree.io/f/mjkezpyz" method="POST" class="space-y-6">
-      <div>
-          <label class="block text-gray-300 mb-2">Your Name</label>
-          <input type="text" name="name" required 
-                 class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors">
-      </div>
-      
-      <div>
-          <label class="block text-gray-300 mb-2">Your Email</label>
-          <input type="email" name="email" required 
-                 class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors">
-      </div>
-      
-      <div>
-          <label class="block text-gray-300 mb-2">Subject</label>
-          <input type="text" name="subject" required 
-                 class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors">
-      </div>
-      
-      <div>
-          <label class="block text-gray-300 mb-2">Message</label>
-          <textarea name="message" rows="5" required 
-                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"></textarea>
-      </div>
-      
-      <button type="submit" class="w-full bg-gradient-primary py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-          Send Message
-      </button>
-  </form>
-</div>
+                        <form id="contact-form" action="https://formspree.io/f/mjkezpyz" method="POST"
+                            class="space-y-6">
+                            <div>
+                                <label class="block text-gray-300 mb-2">Your Name</label>
+                                <input type="text" name="name" required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                            </div>
 
+                            <div>
+                                <label class="block text-gray-300 mb-2">Your Email</label>
+                                <input type="email" name="email" required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                            </div>
 
+                            <div>
+                                <label class="block text-gray-300 mb-2">Subject</label>
+                                <input type="text" name="subject" required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-300 mb-2">Message</label>
+                                <textarea name="message" rows="5" required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-gradient-primary py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
 
                 </div>
             </div>
@@ -1401,10 +1396,12 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-gray-900 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:scale-110">
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-gray-900 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:scale-110">
         <i class="fas fa-chevron-up"></i>
     </button>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -229,36 +229,35 @@ const EMAIL = 'parantap098@gmail.com';
   }
 
 
-/* ===== Extracurriculars: Lightbox + Captions ===== */
+/* Extracurriculars */
+
 (function () {
-  // Collect galleries by name
+  // Gather all gallery buttons
+  const galleryButtons = Array.from(document.querySelectorAll('[data-gallery][data-src]'));
+  // Build galleries: { galleryName: [ {el, src}, ... ] }
   const galleries = {};
-  document.querySelectorAll('[data-gallery]').forEach(btn => {
-    const g = btn.getAttribute('data-gallery');
+  galleryButtons.forEach((btn) => {
+    const g = btn.dataset.gallery;
     if (!galleries[g]) galleries[g] = [];
-    galleries[g].push(btn);
+    galleries[g].push({ el: btn, src: btn.dataset.src });
   });
 
+  // Lightbox elements
   const lb = document.getElementById('lightbox');
-  if (!lb) return; // bail if section not present
   const lbImg = document.getElementById('lb-image');
+  const btnPrev = document.getElementById('lb-prev');
+  const btnNext = document.getElementById('lb-next');
   const btnClose = document.getElementById('lb-close');
-  const btnPrev  = document.getElementById('lb-prev');
-  const btnNext  = document.getElementById('lb-next');
 
   let currentGallery = null;
   let currentIndex = 0;
-  let lastFocus = null;
 
   function openLightbox(galleryName, index) {
     currentGallery = galleries[galleryName] || [];
     currentIndex = index;
-    const src = currentGallery[currentIndex].getAttribute('data-src');
-    lbImg.src = src;
+    setImage();
     lb.classList.remove('hidden');
     lb.classList.add('flex');
-    lastFocus = document.activeElement;
-    btnClose.focus();
     document.body.style.overflow = 'hidden';
   }
 
@@ -266,66 +265,64 @@ const EMAIL = 'parantap098@gmail.com';
     lb.classList.add('hidden');
     lb.classList.remove('flex');
     document.body.style.overflow = '';
-    lbImg.src = '';
-    if (lastFocus) lastFocus.focus();
   }
 
-  function show(delta) {
-    if (!currentGallery || !currentGallery.length) return;
-    currentIndex = (currentIndex + delta + currentGallery.length) % currentGallery.length;
-    const src = currentGallery[currentIndex].getAttribute('data-src');
-    lbImg.src = src;
+  function setImage() {
+    if (!currentGallery.length) return;
+    const item = currentGallery[currentIndex];
+    lbImg.src = item.src;
   }
 
-  // Bind clicks on tiles
-  Object.entries(galleries).forEach(([name, items]) => {
-    items.forEach((el, i) => {
-      el.addEventListener('click', (e) => {
-        e.preventDefault();
-        const idx = parseInt(el.getAttribute('data-index'), 10) || i;
-        openLightbox(name, idx);
-      });
-      el.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          const idx = parseInt(el.getAttribute('data-index'), 10) || i;
-          openLightbox(name, idx);
-        }
-      });
-      el.setAttribute('tabindex', '0');
+  function next() {
+    if (!currentGallery.length) return;
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    setImage();
+  }
+
+  function prev() {
+    if (!currentGallery.length) return;
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    setImage();
+  }
+
+  // Click bindings
+  galleryButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      openLightbox(btn.dataset.gallery, parseInt(btn.dataset.index || '0', 10) || 0);
     });
   });
 
-  // Controls
   btnClose.addEventListener('click', closeLightbox);
-  btnPrev.addEventListener('click', () => show(-1));
-  btnNext.addEventListener('click', () => show(1));
+  btnNext.addEventListener('click', next);
+  btnPrev.addEventListener('click', prev);
   lb.addEventListener('click', (e) => {
-    if (e.target === lb) closeLightbox(); // click backdrop to close
+    // click outside image closes
+    if (e.target === lb) closeLightbox();
   });
+
+  // Keyboard controls
   document.addEventListener('keydown', (e) => {
     if (lb.classList.contains('hidden')) return;
     if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') show(-1);
-    if (e.key === 'ArrowRight') show(1);
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') prev();
   });
 
-  // Mobile/touch: tap to toggle captions in Misc grid
-  document.querySelectorAll('.tap-caption').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      // If it's inside a lightbox gallery tile, let the lightbox handler run
-      if (btn.closest('[data-gallery]')) return;
-      const cap = btn.querySelector('.caption');
+  // Mobile: tap-to-toggle captions in Misc
+  document.querySelectorAll('.tap-caption').forEach((tile) => {
+    tile.addEventListener('click', (e) => {
+      // Don’t interfere with gallery buttons (misc tiles don’t have data-gallery)
+      const cap = tile.querySelector('.caption');
       if (!cap) return;
-      const visible = cap.style.opacity === '1' || cap.classList.contains('!opacity-100');
-      if (visible) {
-        cap.classList.remove('!opacity-100', '!translate-y-0');
-        cap.style.opacity = '';
-        cap.style.transform = '';
-      } else {
+      const isVisible = cap.classList.contains('!opacity-100');
+      document.querySelectorAll('.tap-caption .caption').forEach(c => {
+        c.classList.remove('!opacity-100', '!translate-y-0');
+      });
+      if (!isVisible) {
         cap.classList.add('!opacity-100', '!translate-y-0');
       }
-      e.preventDefault();
     });
   });
 })();
+
+
