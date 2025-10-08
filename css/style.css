@@ -1,17 +1,28 @@
 .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
+
 .animate-float {
-            animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
+
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
+
 .bg-gradient-primary {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -20,24 +31,40 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
 .typewriter {
     overflow: hidden;
     white-space: nowrap;
     width: 31.5ch;
     animation: typing 3.5s steps(34, end), blink-caret .75s step-end infinite;
 }
+
 @keyframes typing {
-    from { width: 0 }
-    to { width: 31.5ch }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 31.5ch
+    }
 }
+
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #16f2b3; }
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #16f2b3;
+    }
 }
 
 .whitespace-pre {
     white-space: pre;
 }
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -92,10 +119,12 @@
     top: 15.5rem;
     z-index: 14;
 }
+
 .project-card:nth-child(5) {
     top: 19.3rem;
     z-index: 15;
 }
+
 .card-content {
     background: linear-gradient(135deg, #0d1224 0%, #0a0d37 100%);
     border: 1px solid rgba(27, 44, 104, 0.6);
@@ -143,11 +172,25 @@ html {
     animation: fadeInUp 0.6s ease forwards;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
 
 @keyframes fadeInUp {
     to {
@@ -158,11 +201,25 @@ html {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .project-card:nth-child(1) { top: 2.5rem; }
-    .project-card:nth-child(2) { top: 4rem; }
-    .project-card:nth-child(3) { top: 5.5rem; }
-    .project-card:nth-child(4) { top: 7rem; }
-    .project-card:nth-child(5) { top: 8.5rem; }
+    .project-card:nth-child(1) {
+        top: 2.5rem;
+    }
+
+    .project-card:nth-child(2) {
+        top: 4rem;
+    }
+
+    .project-card:nth-child(3) {
+        top: 5.5rem;
+    }
+
+    .project-card:nth-child(4) {
+        top: 7rem;
+    }
+
+    .project-card:nth-child(5) {
+        top: 8.5rem;
+    }
 }
 
 
@@ -176,7 +233,8 @@ html {
 .marquee-content {
     display: flex;
     animation: scroll 30s linear infinite;
-    width: calc(200%); /* Double width to accommodate duplicated content */
+    width: calc(200%);
+    /* Double width to accommodate duplicated content */
     gap: 1rem;
 }
 
@@ -227,6 +285,7 @@ html {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(calc(-100% - 1rem));
     }
@@ -243,18 +302,22 @@ html {
         width: 120px;
         padding: 1rem;
     }
-    
+
     .skill-card i {
         font-size: 2rem;
     }
-    
+
     .skill-card img {
         height: 2rem;
     }
 }
 
 /* Collage tiles fill their grid cells without distortion  */
-.collage .tile { display: grid; place-items: center; min-height: 0; }
+.collage .tile {
+    display: grid;
+    place-items: center;
+    min-height: 0;
+}
 
 /* Respect reduced motion
 @media (prefers-reduced-motion: reduce) {

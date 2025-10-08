@@ -4,48 +4,48 @@ const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.toggle('hidden');
 });
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
 });
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
 });
 
 // Back to top button
 const backToTopBtn = document.getElementById('back-to-top');
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopBtn.classList.remove('opacity-0', 'invisible');
-        backToTopBtn.classList.add('opacity-100', 'visible');
-    } else {
-        backToTopBtn.classList.remove('opacity-100', 'visible');
-        backToTopBtn.classList.add('opacity-0', 'invisible');
-    }
+  if (window.pageYOffset > 300) {
+    backToTopBtn.classList.remove('opacity-0', 'invisible');
+    backToTopBtn.classList.add('opacity-100', 'visible');
+  } else {
+    backToTopBtn.classList.remove('opacity-100', 'visible');
+    backToTopBtn.classList.add('opacity-0', 'invisible');
+  }
 });
 
 backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
 
 // Active navigation highlight
@@ -53,47 +53,47 @@ const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.pageYOffset >= (sectionTop - 200)) {
+      current = section.getAttribute('id');
+    }
+  });
 
-    navLinks.forEach(link => {
-        link.classList.remove('text-primary');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('text-primary');
-        }
-    });
+  navLinks.forEach(link => {
+    link.classList.remove('text-primary');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('text-primary');
+    }
+  });
 });
 
 
 // Contact form submission
-  const form = document.getElementById('contact-form');
-  form.addEventListener("submit", async function(event) {
-    event.preventDefault(); // stop normal form submit
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      alert("✅ Your response has been submitted!");
-      form.reset(); // clear the form
-    } else {
-      alert("❌ Something went wrong. Please try again.");
-    }
+const form = document.getElementById('contact-form');
+form.addEventListener("submit", async function (event) {
+  event.preventDefault(); // stop normal form submit
+  const data = new FormData(form);
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: { 'Accept': 'application/json' }
   });
+  if (response.ok) {
+    alert("✅ Your response has been submitted!");
+    form.reset(); // clear the form
+  } else {
+    alert("❌ Something went wrong. Please try again.");
+  }
+});
 
 // const contactForm = document.getElementById('contact-form');
 
 // contactForm.addEventListener('submit', (e) => {
 //     e.preventDefault();
-    
+
 //     // Get form data
 //     const formData = new FormData(contactForm);
 //     const data = {
@@ -102,7 +102,7 @@ window.addEventListener('scroll', () => {
 //         subject: formData.get('subject'),
 //         message: formData.get('message')
 //     };
-    
+
 //     // Simulate form submission
 //     alert('Thank you for your message! I will get back to you soon.');
 //     contactForm.reset();
@@ -136,21 +136,21 @@ window.addEventListener('scroll', () => {
 
 // Add intersection observer for animations
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
-        }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-fade-in');
+    }
+  });
 }, observerOptions);
 
 // Observe all sections for animations
 sections.forEach(section => {
-    observer.observe(section);
+  observer.observe(section);
 });
 
 // Add fade-in animation styles
@@ -175,58 +175,58 @@ document.head.appendChild(style);
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
-    // Add loading animation
-    document.body.classList.add('loaded');
+  // Add loading animation
+  document.body.classList.add('loaded');
 });
 
 
 const Eobserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            Eobserver.unobserve(entry.target); // Optional: animate only once
-        }
-    });
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      Eobserver.unobserve(entry.target); // Optional: animate only once
+    }
+  });
 }, {
-    threshold: 0.1
+  threshold: 0.1
 });
 
 document.querySelectorAll('.timeline-item').forEach(item => {
-    Eobserver.observe(item);
+  Eobserver.observe(item);
 });
 
 const EMAIL = 'parantap098@gmail.com';
-  let fallbackTimeout;
+let fallbackTimeout;
 
-  function tryEmail(e) {
-    // Record time before navigation attempt
-    const before = Date.now();
-    // Try mailto
-    window.location.href = `mailto:${EMAIL}`;
+function tryEmail(e) {
+  // Record time before navigation attempt
+  const before = Date.now();
+  // Try mailto
+  window.location.href = `mailto:${EMAIL}`;
 
-    // Show fallback if after ~500ms focus hasn't changed (heuristic)
-    clearTimeout(fallbackTimeout);
-    fallbackTimeout = setTimeout(() => {
-      // Show fallback UI
-      document.getElementById('email-fallback').classList.remove('hidden');
-    }, 500);
+  // Show fallback if after ~500ms focus hasn't changed (heuristic)
+  clearTimeout(fallbackTimeout);
+  fallbackTimeout = setTimeout(() => {
+    // Show fallback UI
+    document.getElementById('email-fallback').classList.remove('hidden');
+  }, 500);
+}
+
+// Clicking outside hides fallback
+document.addEventListener('click', (e) => {
+  const wrapper = document.getElementById('email-wrapper');
+  if (!wrapper.contains(e.target)) {
+    document.getElementById('email-fallback').classList.add('hidden');
   }
+});
 
-  // Clicking outside hides fallback
-  document.addEventListener('click', (e) => {
-    const wrapper = document.getElementById('email-wrapper');
-    if (!wrapper.contains(e.target)) {
-      document.getElementById('email-fallback').classList.add('hidden');
-    }
+function copyEmail() {
+  navigator.clipboard.writeText(EMAIL).then(() => {
+    const msg = document.getElementById('copy-msg');
+    msg.classList.remove('hidden');
+    setTimeout(() => msg.classList.add('hidden'), 1500);
   });
-
-  function copyEmail() {
-    navigator.clipboard.writeText(EMAIL).then(() => {
-      const msg = document.getElementById('copy-msg');
-      msg.classList.remove('hidden');
-      setTimeout(() => msg.classList.add('hidden'), 1500);
-    });
-  }
+}
 
 
 /* Extracurriculars */
