@@ -232,96 +232,79 @@ function copyEmail() {
 /* Extracurriculars */
 
 (function () {
-  // Gather all gallery buttons
+  // 1) Portal the lightbox to body to avoid transformed ancestors
+  const lb = document.getElementById('lightbox');
+  if (lb && lb.parentElement !== document.body) document.body.appendChild(lb);
+
+  const lbImg   = document.getElementById('lb-image');
+  const btnPrev = document.getElementById('lb-prev');
+  const btnNext = document.getElementById('lb-next');
+  const btnClose= document.getElementById('lb-close');
+
+  // Collect galleries
   const galleryButtons = Array.from(document.querySelectorAll('[data-gallery][data-src]'));
-  // Build galleries: { galleryName: [ {el, src}, ... ] }
   const galleries = {};
   galleryButtons.forEach((btn) => {
     const g = btn.dataset.gallery;
-    if (!galleries[g]) galleries[g] = [];
-    galleries[g].push({ el: btn, src: btn.dataset.src });
+    (galleries[g] ||= []).push({ el: btn, src: btn.dataset.src });
+    // Bind open
+    btn.addEventListener('click', () => openLightbox(g, parseInt(btn.dataset.index || '0', 10) || 0));
   });
 
-  // Lightbox elements
-  const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lb-image');
-  const btnPrev = document.getElementById('lb-prev');
-  const btnNext = document.getElementById('lb-next');
-  const btnClose = document.getElementById('lb-close');
-
-  let currentGallery = null;
+  let currentGallery = [];
   let currentIndex = 0;
+  let bodyScrollY = 0;
 
   function openLightbox(galleryName, index) {
     currentGallery = galleries[galleryName] || [];
     currentIndex = index;
     setImage();
+
+    // 2) Lock scroll without layout shift
+    bodyScrollY = window.scrollY || document.documentElement.scrollTop;
+    document.body.style.top = `-${bodyScrollY}px`;
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+
+    // 3) Show centered modal
     lb.classList.remove('hidden');
     lb.classList.add('flex');
-    document.body.style.overflow = 'hidden';
+
+    // Safety: reset any internal scroll
+    lb.scrollTop = 0;
   }
 
   function closeLightbox() {
     lb.classList.add('hidden');
     lb.classList.remove('flex');
-    document.body.style.overflow = '';
+
+    // Unlock scroll, restore position
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, bodyScrollY);
   }
 
   function setImage() {
     if (!currentGallery.length) return;
-    const item = currentGallery[currentIndex];
-    lbImg.src = item.src;
+    lbImg.src = currentGallery[currentIndex].src;
   }
+  function next() { if (!currentGallery.length) return; currentIndex = (currentIndex + 1) % currentGallery.length; setImage(); }
+  function prev() { if (!currentGallery.length) return; currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length; setImage(); }
 
-  function next() {
-    if (!currentGallery.length) return;
-    currentIndex = (currentIndex + 1) % currentGallery.length;
-    setImage();
-  }
+  btnClose?.addEventListener('click', closeLightbox);
+  btnNext?.addEventListener('click', next);
+  btnPrev?.addEventListener('click', prev);
 
-  function prev() {
-    if (!currentGallery.length) return;
-    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-    setImage();
-  }
+  // Close when clicking the backdrop (but not the image)
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
 
-  // Click bindings
-  galleryButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      openLightbox(btn.dataset.gallery, parseInt(btn.dataset.index || '0', 10) || 0);
-    });
-  });
-
-  btnClose.addEventListener('click', closeLightbox);
-  btnNext.addEventListener('click', next);
-  btnPrev.addEventListener('click', prev);
-  lb.addEventListener('click', (e) => {
-    // click outside image closes
-    if (e.target === lb) closeLightbox();
-  });
-
-  // Keyboard controls
+  // Keyboard
   document.addEventListener('keydown', (e) => {
     if (lb.classList.contains('hidden')) return;
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowRight') next();
     if (e.key === 'ArrowLeft') prev();
-  });
-
-  // Mobile: tap-to-toggle captions in Misc
-  document.querySelectorAll('.tap-caption').forEach((tile) => {
-    tile.addEventListener('click', (e) => {
-      // Don’t interfere with gallery buttons (misc tiles don’t have data-gallery)
-      const cap = tile.querySelector('.caption');
-      if (!cap) return;
-      const isVisible = cap.classList.contains('!opacity-100');
-      document.querySelectorAll('.tap-caption .caption').forEach(c => {
-        c.classList.remove('!opacity-100', '!translate-y-0');
-      });
-      if (!isVisible) {
-        cap.classList.add('!opacity-100', '!translate-y-0');
-      }
-    });
   });
 })();
 
